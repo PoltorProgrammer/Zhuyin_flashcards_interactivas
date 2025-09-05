@@ -10,12 +10,14 @@
           "meaning": "papá",
           "zhuyin_typing": "ㄅㄚˋㄅㄚ˙"
         },
+        "note": "El carácter ㄅ (b) es una consonante bilabial. Su forma se asemeja a una caña o una lanza, inspirada en un carácter antiguo que se usaba para representar la acción de 'romper' o 'golpear'.",
         "example_sentence": {
-          "characters": "我的爸爸很高。",
+          "characters": "他們的爸爸很高。",
+          "spanish_translation": "El papá de ellos es muy alto.",
           "words": [
-            {"characters": "我", "pinyin": "wǒ", "meaning": "yo", "zhuyin_typing": "ㄨㄛˇ"},
+            {"characters": "他們", "pinyin": "tāmen", "meaning": "ellos/ellas", "zhuyin_typing": "ㄊㄚㄇㄣ˙"},
             {"characters": "的", "pinyin": "de", "meaning": "partícula posesiva", "zhuyin_typing": "ㄉㄜ˙"},
-            {"characters": "爸爸", "pinyin": "bàba", "meaning": "papá", "zhuyin_typing": "ㄅㄚˋㄅㄚ˙"},
+            {"characters": "爸爸", "pinyin": "bàba", "meaning": "papá", "zhuyin_typing": "ㄅㄚˋㄅㄚ˙", "note": "La repetición del carácter 爸 (bà) es una forma común de crear sustantivos familiares en chino."},
             {"characters": "很", "pinyin": "hěn", "meaning": "muy", "zhuyin_typing": "ㄏㄣˇ"},
             {"characters": "高", "pinyin": "gāo", "meaning": "alto", "zhuyin_typing": "ㄍㄠ"}
           ]
@@ -30,15 +32,17 @@
           "meaning": "amigo",
           "zhuyin_typing": "ㄆㄥˊㄧㄡˇ"
         },
+        "note": "El carácter ㄆ (p) es una consonante bilabial aspirada, lo que significa que se pronuncia con una pequeña ráfaga de aire. Su forma recuerda a un carácter antiguo que representaba un 'sonido de boca'.",
         "example_sentence": {
-          "characters": "他是我的好朋友。",
+          "characters": "她是你們的好朋友。",
+          "spanish_translation": "Ella es la buena amiga de ustedes.",
           "words": [
-            {"characters": "他", "pinyin": "tā", "meaning": "él", "zhuyin_typing": "ㄊㄚ"},
+            {"characters": "她", "pinyin": "tā", "meaning": "ella", "zhuyin_typing": "ㄊㄚ"},
             {"characters": "是", "pinyin": "shì", "meaning": "ser/estar", "zhuyin_typing": "ㄕˋ"},
-            {"characters": "我", "pinyin": "wǒ", "meaning": "yo", "zhuyin_typing": "ㄨㄛˇ"},
+            {"characters": "你們", "pinyin": "nǐmen", "meaning": "ustedes/vosotros", "zhuyin_typing": "ㄋㄧˇㄇㄣ˙"},
             {"characters": "的", "pinyin": "de", "meaning": "partícula posesiva", "zhuyin_typing": "ㄉㄜ˙"},
             {"characters": "好", "pinyin": "hǎo", "meaning": "bueno", "zhuyin_typing": "ㄏㄠˇ"},
-            {"characters": "朋友", "pinyin": "péngyǒu", "meaning": "amigo", "zhuyin_typing": "ㄆㄥˊㄧㄡˇ"}
+            {"characters": "朋友", "pinyin": "péngyǒu", "meaning": "amigo", "zhuyin_typing": "ㄆㄥˊㄧㄡˇ", "note": "La palabra '朋友' (amigo) se compone de 朋 (péng), que se refiere a amigos en un grupo, y 友 (yǒu), que se refiere a amigos íntimos. Juntas, forman una palabra general para 'amigo'."}
           ]
         }
       },
@@ -51,10 +55,14 @@
           "meaning": "mamá",
           "zhuyin_typing": "ㄇㄚㄇㄚ˙"
         },
+        "note": "El carácter ㄇ (m) tiene una forma que recuerda a la boca y se utiliza para sonidos nasales. Su diseño original viene de un carácter arcaico que representaba una 'madre'.",
         "example_sentence": {
-          "characters": "媽媽在廚房做飯。",
+          "characters": "他們的媽媽在廚房做飯。",
+          "spanish_translation": "La mamá de ellos está cocinando en la cocina.",
           "words": [
-            {"characters": "媽媽", "pinyin": "māma", "meaning": "mamá", "zhuyin_typing": "ㄇㄚㄇㄚ˙"},
+            {"characters": "他們", "pinyin": "tāmen", "meaning": "ellos/ellas", "zhuyin_typing": "ㄊㄚㄇㄣ˙"},
+            {"characters": "的", "pinyin": "de", "meaning": "partícula posesiva", "zhuyin_typing": "ㄉㄜ˙"},
+            {"characters": "媽媽", "pinyin": "māma", "meaning": "mamá", "zhuyin_typing": "ㄇㄚㄇㄚ˙", "note": "Al igual que 爸爸, la repetición del carácter 媽 (mā) indica un sustantivo familiar."},
             {"characters": "在", "pinyin": "zài", "meaning": "estar en", "zhuyin_typing": "ㄗㄞˋ"},
             {"characters": "廚房", "pinyin": "chúfáng", "meaning": "cocina", "zhuyin_typing": "ㄔㄨˊㄈㄤˊ"},
             {"characters": "做飯", "pinyin": "zuòfàn", "meaning": "cocinar", "zhuyin_typing": "ㄗㄨㄛˋㄈㄢˋ"}
@@ -70,8 +78,10 @@
           "meaning": "avión",
           "zhuyin_typing": "ㄈㄟㄐㄧ"
         },
+        "note": "La forma del carácter ㄈ (f) se basa en la forma antigua de un carácter que significaba 'viento' o 'volar'.",
         "example_sentence": {
           "characters": "飛機在天空中飛。",
+          "spanish_translation": "El avión está volando en el cielo.",
           "words": [
             {"characters": "飛機", "pinyin": "fēijī", "meaning": "avión", "zhuyin_typing": "ㄈㄟㄐㄧ"},
             {"characters": "在", "pinyin": "zài", "meaning": "estar en", "zhuyin_typing": "ㄗㄞˋ"},
@@ -90,10 +100,12 @@
           "meaning": "universidad",
           "zhuyin_typing": "ㄉㄚˋㄒㄩㄝˊ"
         },
+        "note": "El carácter ㄉ (d) representa un sonido dental. Su forma es similar a la de un pico o una daga, lo que recuerda a la idea de 'cortar' o 'hacer' en la pronunciación.",
         "example_sentence": {
-          "characters": "我在大學學習中文。",
+          "characters": "他們在大學學習中文。",
+          "spanish_translation": "Ellos están estudiando chino en la universidad.",
           "words": [
-            {"characters": "我", "pinyin": "wǒ", "meaning": "yo", "zhuyin_typing": "ㄨㄛˇ"},
+            {"characters": "他們", "pinyin": "tāmen", "meaning": "ellos/ellas", "zhuyin_typing": "ㄊㄚㄇㄣ˙"},
             {"characters": "在", "pinyin": "zài", "meaning": "estar en", "zhuyin_typing": "ㄗㄞˋ"},
             {"characters": "大學", "pinyin": "dàxué", "meaning": "universidad", "zhuyin_typing": "ㄉㄚˋㄒㄩㄝˊ"},
             {"characters": "學習", "pinyin": "xuéxí", "meaning": "estudiar", "zhuyin_typing": "ㄒㄩㄝˊㄒㄧˊ"},
@@ -110,10 +122,14 @@
           "meaning": "sol",
           "zhuyin_typing": "ㄊㄞˋㄧㄤˊ"
         },
+        "note": "El carácter ㄊ (t) es una consonante dental aspirada. Su forma es la de una 'tienda de campaña' o 'techo', lo que evoca la imagen de algo que se extiende.",
         "example_sentence": {
-          "characters": "太陽很亮。",
+          "characters": "今天的太陽很亮。",
+          "spanish_translation": "El sol de hoy es muy brillante.",
           "words": [
-            {"characters": "太陽", "pinyin": "tàiyáng", "meaning": "sol", "zhuyin_typing": "ㄊㄞˋㄧㄤˊ"},
+            {"characters": "今天", "pinyin": "jīntiān", "meaning": "hoy", "zhuyin_typing": "ㄐㄧㄣㄊㄧㄢ"},
+            {"characters": "的", "pinyin": "de", "meaning": "partícula posesiva", "zhuyin_typing": "ㄉㄜ˙"},
+            {"characters": "太陽", "pinyin": "tàiyáng", "meaning": "sol", "zhuyin_typing": "ㄊㄞˋㄧㄤˊ", "note": "La palabra 太陽 se forma con 太 (supremo, grande) y 陽 (sol, masculino). Literalmente 'el gran sol'."},
             {"characters": "很", "pinyin": "hěn", "meaning": "muy", "zhuyin_typing": "ㄏㄣˇ"},
             {"characters": "亮", "pinyin": "liàng", "meaning": "brillante", "zhuyin_typing": "ㄌㄧㄤˋ"}
           ]
@@ -128,14 +144,17 @@
           "meaning": "hola",
           "zhuyin_typing": "ㄋㄧˇㄏㄠˇ"
         },
+        "note": "El carácter ㄋ (n) es una consonante nasal alveolar. Su forma se asemeja a la de una 'nariz' o a la 'parte delantera de la boca', de donde provienen los sonidos nasales.",
         "example_sentence": {
-          "characters": "你好，很高興見到你。",
+          "characters": "你們好，很高興見到你們。",
+          "spanish_translation": "Hola, estoy muy contento de verlos.",
           "words": [
-            {"characters": "你好", "pinyin": "nǐhǎo", "meaning": "hola", "zhuyin_typing": "ㄋㄧˇㄏㄠˇ"},
+            {"characters": "你們", "pinyin": "nǐmen", "meaning": "ustedes/vosotros", "zhuyin_typing": "ㄋㄧˇㄇㄣ˙"},
+            {"characters": "好", "pinyin": "hǎo", "meaning": "bueno/bien", "zhuyin_typing": "ㄏㄠˇ", "note": "La traducción literal de 你好 es 'tú bien', una forma común y educada de saludo."},
             {"characters": "很", "pinyin": "hěn", "meaning": "muy", "zhuyin_typing": "ㄏㄣˇ"},
             {"characters": "高興", "pinyin": "gāoxìng", "meaning": "feliz/contento", "zhuyin_typing": "ㄍㄠㄒㄧㄥˋ"},
             {"characters": "見到", "pinyin": "jiàndào", "meaning": "ver/conocer", "zhuyin_typing": "ㄐㄧㄢˋㄉㄠˋ"},
-            {"characters": "你", "pinyin": "nǐ", "meaning": "tú", "zhuyin_typing": "ㄋㄧˇ"}
+            {"characters": "你們", "pinyin": "nǐmen", "meaning": "ustedes/vosotros", "zhuyin_typing": "ㄋㄧˇㄇㄣ˙"}
           ]
         }
       },
@@ -148,12 +167,14 @@
           "meaning": "profesor",
           "zhuyin_typing": "ㄌㄠˇㄕ"
         },
+        "note": "El carácter ㄌ (l) es una consonante lateral alveolar. Se asemeja a la forma de una 'bota', lo que simboliza el movimiento del pie o la lengua.",
         "example_sentence": {
-          "characters": "老師教我們中文。",
+          "characters": "我們老師教中文。",
+          "spanish_translation": "Nuestro/a profesor/a nos enseña chino.",
           "words": [
+            {"characters": "我們", "pinyin": "wǒmen", "meaning": "nosotros", "zhuyin_typing": "ㄨㄛˇㄇㄣ˙"},
             {"characters": "老師", "pinyin": "lǎoshī", "meaning": "profesor", "zhuyin_typing": "ㄌㄠˇㄕ"},
             {"characters": "教", "pinyin": "jiāo", "meaning": "enseñar", "zhuyin_typing": "ㄐㄧㄠ"},
-            {"characters": "我們", "pinyin": "wǒmen", "meaning": "nosotros", "zhuyin_typing": "ㄨㄛˇㄇㄣ˙"},
             {"characters": "中文", "pinyin": "zhōngwén", "meaning": "chino", "zhuyin_typing": "ㄓㄨㄥㄨㄣˊ"}
           ]
         }
@@ -167,10 +188,12 @@
           "meaning": "perro",
           "zhuyin_typing": "ㄍㄡˇ"
         },
+        "note": "El carácter ㄍ (g) es una consonante velar no aspirada. Su forma está inspirada en un 'gancho' o 'caña', lo que evoca la acción de 'enganchar'.",
         "example_sentence": {
-          "characters": "這隻狗很可愛。",
+          "characters": "那隻狗很可愛。",
+          "spanish_translation": "Ese perro es muy lindo.",
           "words": [
-            {"characters": "這", "pinyin": "zhè", "meaning": "este", "zhuyin_typing": "ㄓㄜˋ"},
+            {"characters": "那", "pinyin": "nà", "meaning": "eso/a", "zhuyin_typing": "ㄋㄚˋ"},
             {"characters": "隻", "pinyin": "zhī", "meaning": "clasificador para animales", "zhuyin_typing": "ㄓ"},
             {"characters": "狗", "pinyin": "gǒu", "meaning": "perro", "zhuyin_typing": "ㄍㄡˇ"},
             {"characters": "很", "pinyin": "hěn", "meaning": "muy", "zhuyin_typing": "ㄏㄣˇ"},
@@ -187,10 +210,12 @@
           "meaning": "café",
           "zhuyin_typing": "ㄎㄚㄈㄟ"
         },
+        "note": "El carácter ㄎ (k) es una consonante velar aspirada. Su forma es similar a la de 'la parte superior de una rodilla', lo que evoca la idea de 'golpear' o 'crujir'.",
         "example_sentence": {
-          "characters": "我喜歡喝咖啡。",
+          "characters": "他們喜歡喝咖啡。",
+          "spanish_translation": "A ellos les gusta tomar café.",
           "words": [
-            {"characters": "我", "pinyin": "wǒ", "meaning": "yo", "zhuyin_typing": "ㄨㄛˇ"},
+            {"characters": "他們", "pinyin": "tāmen", "meaning": "ellos/ellas", "zhuyin_typing": "ㄊㄚㄇㄣ˙"},
             {"characters": "喜歡", "pinyin": "xǐhuan", "meaning": "gustar", "zhuyin_typing": "ㄒㄧˇㄏㄨㄢ˙"},
             {"characters": "喝", "pinyin": "hē", "meaning": "beber", "zhuyin_typing": "ㄏㄜ"},
             {"characters": "咖啡", "pinyin": "kāfēi", "meaning": "café", "zhuyin_typing": "ㄎㄚㄈㄟ"}
@@ -206,13 +231,16 @@
           "meaning": "bueno",
           "zhuyin_typing": "ㄏㄠˇ"
         },
+        "note": "El carácter ㄏ (h) representa un sonido glotal, similar a un suspiro. Su forma se asemeja a 'dos brazos abiertos', lo que podría aludir a la apertura de la garganta para emitir el sonido.",
         "example_sentence": {
-          "characters": "今天天氣很好。",
+          "characters": "今天的天氣很好。",
+          "spanish_translation": "Hoy el clima está muy bien.",
           "words": [
             {"characters": "今天", "pinyin": "jīntiān", "meaning": "hoy", "zhuyin_typing": "ㄐㄧㄣㄊㄧㄢ"},
+            {"characters": "的", "pinyin": "de", "meaning": "partícula posesiva", "zhuyin_typing": "ㄉㄜ˙"},
             {"characters": "天氣", "pinyin": "tiānqì", "meaning": "clima", "zhuyin_typing": "ㄊㄧㄢㄑㄧˋ"},
             {"characters": "很", "pinyin": "hěn", "meaning": "muy", "zhuyin_typing": "ㄏㄣˇ"},
-            {"characters": "好", "pinyin": "hǎo", "meaning": "bueno", "zhuyin_typing": "ㄏㄠˇ"}
+            {"characters": "好", "pinyin": "hǎo", "meaning": "bueno", "zhuyin_typing": "ㄏㄠˇ", "note": "El carácter 好 (hǎo) se forma con los radicales 女 (nǚ), que significa 'mujer', y 子 (zǐ), que significa 'hijo' o 'niño'. Juntos simbolizan una familia feliz y armoniosa, de donde surge el significado de 'bueno'."}
           ]
         }
       },
@@ -225,10 +253,12 @@
           "meaning": "casa/hogar",
           "zhuyin_typing": "ㄐㄧㄚ"
         },
+        "note": "El carácter ㄐ (j) representa una consonante palatal. Su forma es similar a la de una 'llave' o 'gancho', lo que puede aludir a 'abrir' o 'cerrar' sonidos.",
         "example_sentence": {
-          "characters": "我的家在台北。",
+          "characters": "他們的家在台北。",
+          "spanish_translation": "La casa de ellos está en Taipei.",
           "words": [
-            {"characters": "我", "pinyin": "wǒ", "meaning": "yo", "zhuyin_typing": "ㄨㄛˇ"},
+            {"characters": "他們", "pinyin": "tāmen", "meaning": "ellos/ellas", "zhuyin_typing": "ㄊㄚㄇㄣ˙"},
             {"characters": "的", "pinyin": "de", "meaning": "partícula posesiva", "zhuyin_typing": "ㄉㄜ˙"},
             {"characters": "家", "pinyin": "jiā", "meaning": "casa", "zhuyin_typing": "ㄐㄧㄚ"},
             {"characters": "在", "pinyin": "zài", "meaning": "estar en", "zhuyin_typing": "ㄗㄞˋ"},
@@ -245,8 +275,10 @@
           "meaning": "dinero",
           "zhuyin_typing": "ㄑㄧㄢˊ"
         },
+        "note": "El carácter ㄑ (q) es una consonante palatal aspirada. Su forma, que recuerda a un 'caracol' o 'círculo con un gancho', se relaciona con el sonido 'silbante' que se produce al pronunciarla.",
         "example_sentence": {
           "characters": "他有很多錢。",
+          "spanish_translation": "Él tiene mucho dinero.",
           "words": [
             {"characters": "他", "pinyin": "tā", "meaning": "él", "zhuyin_typing": "ㄊㄚ"},
             {"characters": "有", "pinyin": "yǒu", "meaning": "tener", "zhuyin_typing": "ㄧㄡˇ"},
@@ -264,10 +296,12 @@
           "meaning": "escuela",
           "zhuyin_typing": "ㄒㄩㄝˊㄒㄧㄠˋ"
         },
+        "note": "El carácter ㄒ (x) representa una fricativa palatal. Su forma es similar a un 'palo' con una línea que lo cruza, lo que se relaciona con la suavidad de su sonido.",
         "example_sentence": {
-          "characters": "孩子們在學校學習。",
+          "characters": "他們在學校學習。",
+          "spanish_translation": "Ellos están estudiando en la escuela.",
           "words": [
-            {"characters": "孩子們", "pinyin": "háizimen", "meaning": "niños", "zhuyin_typing": "ㄏㄞˊㄗ˙ㄇㄣ˙"},
+            {"characters": "他們", "pinyin": "tāmen", "meaning": "ellos/ellas", "zhuyin_typing": "ㄊㄚㄇㄣ˙"},
             {"characters": "在", "pinyin": "zài", "meaning": "estar en", "zhuyin_typing": "ㄗㄞˋ"},
             {"characters": "學校", "pinyin": "xuéxiào", "meaning": "escuela", "zhuyin_typing": "ㄒㄩㄝˊㄒㄧㄠˋ"},
             {"characters": "學習", "pinyin": "xuéxí", "meaning": "estudiar", "zhuyin_typing": "ㄒㄩㄝˊㄒㄧˊ"}
@@ -283,14 +317,15 @@
           "meaning": "China",
           "zhuyin_typing": "ㄓㄨㄥㄍㄨㄛˊ"
         },
+        "note": "El carácter ㄓ (zh) es una consonante retrofleja. Su forma evoca la imagen de una 'hoja de bambú' o 'un insecto' que se enrolla. Se pronuncia con la lengua curvada hacia arriba.",
         "example_sentence": {
-          "characters": "中國是一個大國家。",
+          "characters": "他們是中國人。",
+          "spanish_translation": "Ellos son chinos.",
           "words": [
-            {"characters": "中國", "pinyin": "zhōngguó", "meaning": "China", "zhuyin_typing": "ㄓㄨㄥㄍㄨㄛˊ"},
+            {"characters": "他們", "pinyin": "tāmen", "meaning": "ellos/ellas", "zhuyin_typing": "ㄊㄚㄇㄣ˙"},
             {"characters": "是", "pinyin": "shì", "meaning": "ser/estar", "zhuyin_typing": "ㄕˋ"},
-            {"characters": "一個", "pinyin": "yíge", "meaning": "uno/un", "zhuyin_typing": "ㄧˊㄍㄜ˙"},
-            {"characters": "大", "pinyin": "dà", "meaning": "grande", "zhuyin_typing": "ㄉㄚˋ"},
-            {"characters": "國家", "pinyin": "guójiā", "meaning": "país", "zhuyin_typing": "ㄍㄨㄛˊㄐㄧㄚ"}
+            {"characters": "中國", "pinyin": "zhōngguó", "meaning": "China", "zhuyin_typing": "ㄓㄨㄥㄍㄨㄛˊ", "note": "El nombre de China, 中國 (zhōngguó), se traduce literalmente como 'País del Medio' o 'Reino del Centro', reflejando la antigua creencia de que China era el centro del mundo."},
+            {"characters": "人", "pinyin": "rén", "meaning": "persona", "zhuyin_typing": "ㄖㄣˊ"}
           ]
         }
       },
@@ -303,8 +338,10 @@
           "meaning": "comer",
           "zhuyin_typing": "ㄔㄈㄢˋ"
         },
+        "note": "El carácter ㄔ (ch) es una consonante retrofleja aspirada. Se parece a una 'pluma' o a una 'mano' con los dedos extendidos, lo que puede relacionarse con el movimiento de la lengua.",
         "example_sentence": {
           "characters": "我們一起吃飯吧。",
+          "spanish_translation": "Vamos a comer juntos.",
           "words": [
             {"characters": "我們", "pinyin": "wǒmen", "meaning": "nosotros", "zhuyin_typing": "ㄨㄛˇㄇㄣ˙"},
             {"characters": "一起", "pinyin": "yìqǐ", "meaning": "juntos", "zhuyin_typing": "ㄧˋㄑㄧˇ"},
@@ -322,8 +359,10 @@
           "meaning": "libro",
           "zhuyin_typing": "ㄕㄨ"
         },
+        "note": "El carácter ㄕ (sh) es una consonante retrofleja. Se inspira en la forma de un 'cuerpo humano' que se curva, lo que refleja la posición de la lengua al pronunciarla.",
         "example_sentence": {
           "characters": "這本書很有趣。",
+          "spanish_translation": "Este libro es muy interesante.",
           "words": [
             {"characters": "這", "pinyin": "zhè", "meaning": "este", "zhuyin_typing": "ㄓㄜˋ"},
             {"characters": "本", "pinyin": "běn", "meaning": "clasificador para libros", "zhuyin_typing": "ㄅㄣˇ"},
@@ -342,10 +381,13 @@
           "meaning": "persona",
           "zhuyin_typing": "ㄖㄣˊ"
         },
+        "note": "El carácter ㄖ (r) es una consonante retrofleja. Su forma es similar a una 'pluma' o 'abanico' que se extiende. Su sonido es vibrante y retroflejo, a diferencia de la 'r' en español.",
         "example_sentence": {
           "characters": "那個人很聰明。",
+          "spanish_translation": "Esa persona es muy inteligente.",
           "words": [
-            {"characters": "那個", "pinyin": "nàge", "meaning": "ese/esa", "zhuyin_typing": "ㄋㄚˋㄍㄜ˙"},
+            {"characters": "那", "pinyin": "nà", "meaning": "ese/esa", "zhuyin_typing": "ㄋㄚˋ"},
+            {"characters": "個", "pinyin": "ge", "meaning": "clasificador general", "zhuyin_typing": "ㄍㄜ˙"},
             {"characters": "人", "pinyin": "rén", "meaning": "persona", "zhuyin_typing": "ㄖㄣˊ"},
             {"characters": "很", "pinyin": "hěn", "meaning": "muy", "zhuyin_typing": "ㄏㄣˇ"},
             {"characters": "聰明", "pinyin": "cōngming", "meaning": "inteligente", "zhuyin_typing": "ㄘㄨㄥㄇㄧㄥˊ"}
@@ -361,10 +403,12 @@
           "meaning": "mañana",
           "zhuyin_typing": "ㄗㄠˇㄕㄤ˙"
         },
+        "note": "El carácter ㄗ (z) es una consonante alveolar africada. Su forma es la de 'un pie' o 'una base', lo que simboliza un sonido 'fundamental' o 'base'.",
         "example_sentence": {
-          "characters": "我早上七點起床。",
+          "characters": "他們早上七點起床。",
+          "spanish_translation": "Ellos se levantan a las siete de la mañana.",
           "words": [
-            {"characters": "我", "pinyin": "wǒ", "meaning": "yo", "zhuyin_typing": "ㄨㄛˇ"},
+            {"characters": "他們", "pinyin": "tāmen", "meaning": "ellos/ellas", "zhuyin_typing": "ㄊㄚㄇㄣ˙"},
             {"characters": "早上", "pinyin": "zǎoshang", "meaning": "mañana", "zhuyin_typing": "ㄗㄠˇㄕㄤ˙"},
             {"characters": "七點", "pinyin": "qīdiǎn", "meaning": "siete en punto", "zhuyin_typing": "ㄑㄧㄉㄧㄢˇ"},
             {"characters": "起床", "pinyin": "qǐchuáng", "meaning": "levantarse", "zhuyin_typing": "ㄑㄧˇㄔㄨㄤˊ"}
@@ -380,10 +424,12 @@
           "meaning": "comida/verdura",
           "zhuyin_typing": "ㄘㄞˋ"
         },
+        "note": "El carácter ㄘ (c) es una consonante alveolar africada aspirada. Se asemeja a una 'cabeza' o 'un corte', lo que refleja la brusquedad del sonido.",
         "example_sentence": {
-          "characters": "這道菜很好吃。",
+          "characters": "那道菜很好吃。",
+          "spanish_translation": "Ese plato está muy delicioso.",
           "words": [
-            {"characters": "這", "pinyin": "zhè", "meaning": "este", "zhuyin_typing": "ㄓㄜˋ"},
+            {"characters": "那", "pinyin": "nà", "meaning": "ese/esa", "zhuyin_typing": "ㄋㄚˋ"},
             {"characters": "道", "pinyin": "dào", "meaning": "clasificador para platos", "zhuyin_typing": "ㄉㄠˋ"},
             {"characters": "菜", "pinyin": "cài", "meaning": "plato/comida", "zhuyin_typing": "ㄘㄞˋ"},
             {"characters": "很", "pinyin": "hěn", "meaning": "muy", "zhuyin_typing": "ㄏㄣˇ"},
@@ -400,10 +446,12 @@
           "meaning": "tres",
           "zhuyin_typing": "ㄙㄢ"
         },
+        "note": "El carácter ㄙ (s) es una consonante alveolar. Su forma se basa en la de 'una red' o 'un círculo incompleto', lo que evoca un sonido continuo y sibilante.",
         "example_sentence": {
-          "characters": "我有三個蘋果。",
+          "characters": "他們有三個蘋果。",
+          "spanish_translation": "Ellos tienen tres manzanas.",
           "words": [
-            {"characters": "我", "pinyin": "wǒ", "meaning": "yo", "zhuyin_typing": "ㄨㄛˇ"},
+            {"characters": "他們", "pinyin": "tāmen", "meaning": "ellos/ellas", "zhuyin_typing": "ㄊㄚㄇㄣ˙"},
             {"characters": "有", "pinyin": "yǒu", "meaning": "tener", "zhuyin_typing": "ㄧㄡˇ"},
             {"characters": "三個", "pinyin": "sānge", "meaning": "tres", "zhuyin_typing": "ㄙㄢㄍㄜ˙"},
             {"characters": "蘋果", "pinyin": "píngguǒ", "meaning": "manzana", "zhuyin_typing": "ㄆㄧㄥˊㄍㄨㄛˇ"}
@@ -421,8 +469,10 @@
           "meaning": "mamá",
           "zhuyin_typing": "ㄇㄚ"
         },
+        "note": "El carácter ㄚ (a) es una vocal abierta. Su forma es similar a una boca abierta, lo que refleja la forma de los labios al pronunciar el sonido 'a'.",
         "example_sentence": {
           "characters": "我愛我的媽媽。",
+          "spanish_translation": "Amo a mi mamá.",
           "words": [
             {"characters": "我", "pinyin": "wǒ", "meaning": "yo", "zhuyin_typing": "ㄨㄛˇ"},
             {"characters": "愛", "pinyin": "ài", "meaning": "amar", "zhuyin_typing": "ㄞˋ"},
@@ -440,10 +490,12 @@
           "meaning": "yo",
           "zhuyin_typing": "ㄨㄛˇ"
         },
+        "note": "El carácter ㄛ (o) es una vocal posterior. Su forma es circular, lo que se asemeja a la posición de los labios al pronunciar un sonido de 'o' con la boca redondeada.",
         "example_sentence": {
-          "characters": "我是學生。",
+          "characters": "你們是學生。",
+          "spanish_translation": "Ustedes son estudiantes.",
           "words": [
-            {"characters": "我", "pinyin": "wǒ", "meaning": "yo", "zhuyin_typing": "ㄨㄛˇ"},
+            {"characters": "你們", "pinyin": "nǐmen", "meaning": "ustedes/vosotros", "zhuyin_typing": "ㄋㄧˇㄇㄣ˙"},
             {"characters": "是", "pinyin": "shì", "meaning": "ser/estar", "zhuyin_typing": "ㄕˋ"},
             {"characters": "學生", "pinyin": "xuésheng", "meaning": "estudiante", "zhuyin_typing": "ㄒㄩㄝˊㄕㄥ"}
           ]
@@ -458,10 +510,12 @@
           "meaning": "hambriento",
           "zhuyin_typing": "ㄜˋ"
         },
+        "note": "El carácter ㄜ (e) es una vocal media. Su forma se asemeja a la de una 'cabeza', que refleja la posición de la lengua en el centro de la boca.",
         "example_sentence": {
-          "characters": "我很餓想吃飯。",
+          "characters": "他們很餓想吃飯。",
+          "spanish_translation": "Ellos tienen mucha hambre y quieren comer.",
           "words": [
-            {"characters": "我", "pinyin": "wǒ", "meaning": "yo", "zhuyin_typing": "ㄨㄛˇ"},
+            {"characters": "他們", "pinyin": "tāmen", "meaning": "ellos/ellas", "zhuyin_typing": "ㄊㄚㄇㄣ˙"},
             {"characters": "很", "pinyin": "hěn", "meaning": "muy", "zhuyin_typing": "ㄏㄣˇ"},
             {"characters": "餓", "pinyin": "è", "meaning": "hambriento", "zhuyin_typing": "ㄜˋ"},
             {"characters": "想", "pinyin": "xiǎng", "meaning": "querer", "zhuyin_typing": "ㄒㄧㄤˇ"},
@@ -478,12 +532,15 @@
           "meaning": "este",
           "zhuyin_typing": "ㄓㄜˋ"
         },
+        "note": "El carácter ㄝ (ê) representa una vocal media-abierta. Su forma se asemeja a la de un 'lado' o 'cuchillo', lo que puede aludir a la pronunciación lateral del sonido. Aunque el sonido de 'ê' es similar al de la 'e' en español, en el sistema Zhuyin no se usa para sílabas que comienzan con ciertas consonantes. Para palabras como '這' (zhè), se usa la vocal 'ㄜ' (e).",
         "example_sentence": {
-          "characters": "這是我的房間。",
+          "characters": "那是他們的房間。",
+          "spanish_translation": "Esa es la habitación de ellos.",
           "words": [
-            {"characters": "這", "pinyin": "zhè", "meaning": "este", "zhuyin_typing": "ㄓㄜˋ"},
+            {"characters": "那", "pinyin": "nà", "meaning": "eso/a", "zhuyin_typing": "ㄋㄚˋ"},
             {"characters": "是", "pinyin": "shì", "meaning": "ser/estar", "zhuyin_typing": "ㄕˋ"},
-            {"characters": "我的", "pinyin": "wǒde", "meaning": "mi", "zhuyin_typing": "ㄨㄛˇㄉㄜ˙"},
+            {"characters": "他們", "pinyin": "tāmen", "meaning": "ellos/ellas", "zhuyin_typing": "ㄊㄚㄇㄣ˙"},
+            {"characters": "的", "pinyin": "de", "meaning": "partícula posesiva", "zhuyin_typing": "ㄉㄜ˙"},
             {"characters": "房間", "pinyin": "fángjiān", "meaning": "habitación", "zhuyin_typing": "ㄈㄤˊㄐㄧㄢ"}
           ]
         }
@@ -497,10 +554,13 @@
           "meaning": "amor",
           "zhuyin_typing": "ㄞˋ"
         },
+        "note": "El carácter ㄞ (ai) es una vocal compuesta. Su forma se basa en el carácter de una 'planta' o 'árbol' con ramas, lo que refleja la combinación de dos sonidos vocales en uno.",
         "example_sentence": {
-          "characters": "我愛學習中文。",
+          "characters": "他們都愛學習中文。",
+          "spanish_translation": "A todos ellos les encanta estudiar chino.",
           "words": [
-            {"characters": "我", "pinyin": "wǒ", "meaning": "yo", "zhuyin_typing": "ㄨㄛˇ"},
+            {"characters": "他們", "pinyin": "tāmen", "meaning": "ellos/ellas", "zhuyin_typing": "ㄊㄚㄇㄣ˙"},
+            {"characters": "都", "pinyin": "dōu", "meaning": "todos", "zhuyin_typing": "ㄉㄡ"},
             {"characters": "愛", "pinyin": "ài", "meaning": "amar", "zhuyin_typing": "ㄞˋ"},
             {"characters": "學習", "pinyin": "xuéxí", "meaning": "estudiar", "zhuyin_typing": "ㄒㄩㄝˊㄒㄧˊ"},
             {"characters": "中文", "pinyin": "zhōngwén", "meaning": "chino", "zhuyin_typing": "ㄓㄨㄥㄨㄣˊ"}
@@ -516,10 +576,12 @@
           "meaning": "Estados Unidos",
           "zhuyin_typing": "ㄇㄟˇㄍㄨㄛˊ"
         },
+        "note": "El carácter ㄟ (ei) es una vocal compuesta. Su forma se parece a un 'arco' o 'una ola' lo que refleja la transición del sonido de una vocal a otra.",
         "example_sentence": {
-          "characters": "他來自美國。",
+          "characters": "他們來自美國。",
+          "spanish_translation": "Ellos vienen de Estados Unidos.",
           "words": [
-            {"characters": "他", "pinyin": "tā", "meaning": "él", "zhuyin_typing": "ㄊㄚ"},
+            {"characters": "他們", "pinyin": "tāmen", "meaning": "ellos/ellas", "zhuyin_typing": "ㄊㄚㄇㄣ˙"},
             {"characters": "來自", "pinyin": "láizì", "meaning": "venir de", "zhuyin_typing": "ㄌㄞˊㄗˋ"},
             {"characters": "美國", "pinyin": "měiguó", "meaning": "Estados Unidos", "zhuyin_typing": "ㄇㄟˇㄍㄨㄛˊ"}
           ]
@@ -534,10 +596,12 @@
           "meaning": "bueno",
           "zhuyin_typing": "ㄏㄠˇ"
         },
+        "note": "El carácter ㄠ (ao) es una vocal compuesta. Su forma recuerda a una 'rama' o 'un rizo', lo que simboliza un sonido que 'se va a la boca'.",
         "example_sentence": {
-          "characters": "你好嗎？",
+          "characters": "你們好嗎？",
+          "spanish_translation": "¿Cómo están ustedes?",
           "words": [
-            {"characters": "你", "pinyin": "nǐ", "meaning": "tú", "zhuyin_typing": "ㄋㄧˇ"},
+            {"characters": "你們", "pinyin": "nǐmen", "meaning": "ustedes/vosotros", "zhuyin_typing": "ㄋㄧˇㄇㄣ˙"},
             {"characters": "好", "pinyin": "hǎo", "meaning": "bueno/bien", "zhuyin_typing": "ㄏㄠˇ"},
             {"characters": "嗎", "pinyin": "ma", "meaning": "partícula interrogativa", "zhuyin_typing": "ㄇㄚ˙"}
           ]
@@ -552,8 +616,10 @@
           "meaning": "caminar",
           "zhuyin_typing": "ㄗㄡˇ"
         },
+        "note": "El carácter ㄡ (ou) es una vocal compuesta. Su forma se asemeja a una 'cabeza con un cuerno' o 'un cuenco', lo que simboliza un sonido que comienza y se redondea.",
         "example_sentence": {
           "characters": "我們一起走吧。",
+          "spanish_translation": "Vamos a caminar/ir juntos.",
           "words": [
             {"characters": "我們", "pinyin": "wǒmen", "meaning": "nosotros", "zhuyin_typing": "ㄨㄛˇㄇㄣ˙"},
             {"characters": "一起", "pinyin": "yìqǐ", "meaning": "juntos", "zhuyin_typing": "ㄧˋㄑㄧˇ"},
@@ -571,10 +637,12 @@
           "meaning": "arroz/comida",
           "zhuyin_typing": "ㄈㄢˋ"
         },
+        "note": "El carácter ㄢ (an) es una vocal compuesta nasal. Su forma se inspira en el carácter para 'paz' o 'tranquilidad', lo que alude a la suavidad del sonido al final de la sílaba.",
         "example_sentence": {
-          "characters": "我在吃晚飯。",
+          "characters": "他們在吃晚飯。",
+          "spanish_translation": "Ellos están cenando.",
           "words": [
-            {"characters": "我", "pinyin": "wǒ", "meaning": "yo", "zhuyin_typing": "ㄨㄛˇ"},
+            {"characters": "他們", "pinyin": "tāmen", "meaning": "ellos/ellas", "zhuyin_typing": "ㄊㄚㄇㄣ˙"},
             {"characters": "在", "pinyin": "zài", "meaning": "estar (acción en progreso)", "zhuyin_typing": "ㄗㄞˋ"},
             {"characters": "吃", "pinyin": "chī", "meaning": "comer", "zhuyin_typing": "ㄔ"},
             {"characters": "晚飯", "pinyin": "wǎnfàn", "meaning": "cena", "zhuyin_typing": "ㄨㄢˇㄈㄢˋ"}
@@ -590,9 +658,12 @@
           "meaning": "puerta",
           "zhuyin_typing": "ㄇㄣˊ"
         },
+        "note": "El carácter ㄣ (en) es una vocal compuesta nasal. Su forma es similar a la de un 'rincón' o 'un giro', lo que se relaciona con la peculiaridad del sonido final.",
         "example_sentence": {
-          "characters": "請關門。",
+          "characters": "他們請關門。",
+          "spanish_translation": "Ellos piden que cierres la puerta.",
           "words": [
+            {"characters": "他們", "pinyin": "tāmen", "meaning": "ellos/ellas", "zhuyin_typing": "ㄊㄚㄇㄣ˙"},
             {"characters": "請", "pinyin": "qǐng", "meaning": "por favor", "zhuyin_typing": "ㄑㄧㄥˇ"},
             {"characters": "關", "pinyin": "guān", "meaning": "cerrar", "zhuyin_typing": "ㄍㄨㄢ"},
             {"characters": "門", "pinyin": "mén", "meaning": "puerta", "zhuyin_typing": "ㄇㄣˊ"}
@@ -608,10 +679,13 @@
           "meaning": "habitación",
           "zhuyin_typing": "ㄈㄤˊㄐㄧㄢ"
         },
+        "note": "El carácter ㄤ (ang) es una vocal compuesta nasal. Se parece a 'un muro' o 'una valla', lo que simboliza un sonido que se 'contiene' en la parte posterior de la boca.",
         "example_sentence": {
-          "characters": "我的房間很大。",
+          "characters": "他們的房間很大。",
+          "spanish_translation": "La habitación de ellos es muy grande.",
           "words": [
-            {"characters": "我的", "pinyin": "wǒde", "meaning": "mi", "zhuyin_typing": "ㄨㄛˇㄉㄜ˙"},
+            {"characters": "他們", "pinyin": "tāmen", "meaning": "ellos/ellas", "zhuyin_typing": "ㄊㄚㄇㄣ˙"},
+            {"characters": "的", "pinyin": "de", "meaning": "partícula posesiva", "zhuyin_typing": "ㄉㄜ˙"},
             {"characters": "房間", "pinyin": "fángjiān", "meaning": "habitación", "zhuyin_typing": "ㄈㄤˊㄐㄧㄢ"},
             {"characters": "很", "pinyin": "hěn", "meaning": "muy", "zhuyin_typing": "ㄏㄣˇ"},
             {"characters": "大", "pinyin": "dà", "meaning": "grande", "zhuyin_typing": "ㄉㄚˋ"}
@@ -627,10 +701,12 @@
           "meaning": "amigo",
           "zhuyin_typing": "ㄆㄥˊㄧㄡˇ"
         },
+        "note": "El carácter ㄥ (eng) es una vocal compuesta nasal. Su forma es similar a la de 'un cuerno' o 'un pico', lo que evoca un sonido que se concentra y se 'proyecta'.",
         "example_sentence": {
           "characters": "他們是好朋友。",
+          "spanish_translation": "Ellos son buenos amigos.",
           "words": [
-            {"characters": "他們", "pinyin": "tāmen", "meaning": "ellos", "zhuyin_typing": "ㄊㄚㄇㄣ˙"},
+            {"characters": "他們", "pinyin": "tāmen", "meaning": "ellos/ellas", "zhuyin_typing": "ㄊㄚㄇㄣ˙"},
             {"characters": "是", "pinyin": "shì", "meaning": "ser/estar", "zhuyin_typing": "ㄕˋ"},
             {"characters": "好", "pinyin": "hǎo", "meaning": "bueno", "zhuyin_typing": "ㄏㄠˇ"},
             {"characters": "朋友", "pinyin": "péngyǒu", "meaning": "amigo", "zhuyin_typing": "ㄆㄥˊㄧㄡˇ"}
@@ -646,8 +722,10 @@
           "meaning": "hijo",
           "zhuyin_typing": "ㄦˊㄗ˙"
         },
+        "note": "El carácter ㄦ (er) es una vocal retrofleja. Su forma es similar a la de 'dos piernas' o 'un par', lo que se asocia con el sonido que se produce al 'enrollar' la lengua. Se utiliza también como sufijo para indicar un sonido retroflejo en el mandarín de Pekín, conocido como 'érhuàyīn'.",
         "example_sentence": {
           "characters": "他有一個兒子。",
+          "spanish_translation": "Él tiene un hijo.",
           "words": [
             {"characters": "他", "pinyin": "tā", "meaning": "él", "zhuyin_typing": "ㄊㄚ"},
             {"characters": "有", "pinyin": "yǒu", "meaning": "tener", "zhuyin_typing": "ㄧㄡˇ"},
@@ -665,8 +743,10 @@
           "meaning": "uno",
           "zhuyin_typing": "ㄧ"
         },
+        "note": "El carácter ㄧ (i) es una vocal cerrada y frontal. Su forma, que es una línea recta, se asemeja a una 'aguja' o a un 'palo', lo que simboliza un sonido simple y agudo.",
         "example_sentence": {
           "characters": "一加一等於二。",
+          "spanish_translation": "Uno más uno es igual a dos.",
           "words": [
             {"characters": "一", "pinyin": "yī", "meaning": "uno", "zhuyin_typing": "ㄧ"},
             {"characters": "加", "pinyin": "jiā", "meaning": "más", "zhuyin_typing": "ㄐㄧㄚ"},
@@ -685,10 +765,12 @@
           "meaning": "cinco",
           "zhuyin_typing": "ㄨˇ"
         },
+        "note": "El carácter ㄨ (u) es una vocal cerrada y posterior. Su forma es similar a una 'media luna' o 'un cuenco', lo que se asocia con la forma redondeada de los labios al pronunciarla.",
         "example_sentence": {
-          "characters": "我有五本書。",
+          "characters": "他們有五本書。",
+          "spanish_translation": "Ellos tienen cinco libros.",
           "words": [
-            {"characters": "我", "pinyin": "wǒ", "meaning": "yo", "zhuyin_typing": "ㄨㄛˇ"},
+            {"characters": "他們", "pinyin": "tāmen", "meaning": "ellos/ellas", "zhuyin_typing": "ㄊㄚㄇㄣ˙"},
             {"characters": "有", "pinyin": "yǒu", "meaning": "tener", "zhuyin_typing": "ㄧㄡˇ"},
             {"characters": "五本", "pinyin": "wǔběn", "meaning": "cinco (libros)", "zhuyin_typing": "ㄨˇㄅㄣˇ"},
             {"characters": "書", "pinyin": "shū", "meaning": "libro", "zhuyin_typing": "ㄕㄨ"}
@@ -704,12 +786,14 @@
           "meaning": "hija",
           "zhuyin_typing": "ㄋㄩˇㄦˊ"
         },
+        "note": "El carácter ㄩ (ü) es una vocal cerrada y frontal. Su forma se asemeja a la de una 'cabeza redonda con un gancho', lo que simboliza el sonido producido con los labios redondeados y la lengua hacia adelante.",
         "example_sentence": {
-          "characters": "她是我的女兒。",
+          "characters": "她是他們的女儿。",
+          "spanish_translation": "Ella es la hija de ellos.",
           "words": [
             {"characters": "她", "pinyin": "tā", "meaning": "ella", "zhuyin_typing": "ㄊㄚ"},
             {"characters": "是", "pinyin": "shì", "meaning": "ser/estar", "zhuyin_typing": "ㄕˋ"},
-            {"characters": "我的", "pinyin": "wǒde", "meaning": "mi", "zhuyin_typing": "ㄨㄛˇㄉㄜ˙"},
+            {"characters": "他們的", "pinyin": "tāmende", "meaning": "de ellos/ellas", "zhuyin_typing": "ㄊㄚㄇㄣㄉㄜ˙"},
             {"characters": "女兒", "pinyin": "nǚ'ér", "meaning": "hija", "zhuyin_typing": "ㄋㄩˇㄦˊ"}
           ]
         }
@@ -724,7 +808,8 @@
           "characters": "媽",
           "pinyin": "mā",
           "meaning": "mamá",
-          "zhuyin_typing": "ㄇㄚ"
+          "zhuyin_typing": "ㄇㄚ",
+          "spanish_translation": "mamá"
         }
       },
       {
@@ -735,7 +820,8 @@
           "characters": "麻",
           "pinyin": "má",
           "meaning": "cáñamo/entumecido",
-          "zhuyin_typing": "ㄇㄚˊ"
+          "zhuyin_typing": "ㄇㄚˊ",
+          "spanish_translation": "cáñamo"
         }
       },
       {
@@ -746,7 +832,8 @@
           "characters": "馬",
           "pinyin": "mǎ",
           "meaning": "caballo",
-          "zhuyin_typing": "ㄇㄚˇ"
+          "zhuyin_typing": "ㄇㄚˇ",
+          "spanish_translation": "caballo"
         }
       },
       {
@@ -757,7 +844,8 @@
           "characters": "罵",
           "pinyin": "mà",
           "meaning": "regañar",
-          "zhuyin_typing": "ㄇㄚˋ"
+          "zhuyin_typing": "ㄇㄚˋ",
+          "spanish_translation": "regañar"
         }
       },
       {
@@ -768,7 +856,8 @@
           "characters": "嗎",
           "pinyin": "ma",
           "meaning": "partícula interrogativa",
-          "zhuyin_typing": "ㄇㄚ˙"
+          "zhuyin_typing": "ㄇㄚ˙",
+          "spanish_translation": "partícula interrogativa"
         }
       }
     ]
