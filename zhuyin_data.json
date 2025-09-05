@@ -1,4 +1,10 @@
 {
+  "notes": [
+    {
+      "title": "Notas aclaratorias sobre el sistema Zhuyin",
+      "content": "El sistema Zhuyin, también conocido como Bopomofo, es el sistema de transcripción fonética oficial en Taiwán. Aunque cumple una función similar al Pinyin, su uso principal es la enseñanza del mandarín a hablantes nativos y extranjeros en Taiwán. A diferencia del Pinyin, que usa caracteres latinos, Zhuyin utiliza sus propios símbolos. La pronunciación de algunas vocales puede variar ligeramente cuando se combinan con diferentes consonantes."
+    }
+  ],
   "zhuyin_system": {
     "consonants": [
       {
@@ -32,7 +38,7 @@
           "meaning": "amigo",
           "zhuyin_typing": "ㄆㄥˊㄧㄡˇ"
         },
-        "note": "El carácter ㄆ (p) es una consonante bilabial aspirada, lo que significa que se pronuncia con una pequeña ráfaga de aire. Su forma recuerda a un carácter antiguo que representaba un 'sonido de boca'.",
+        "note": "El carácter ㄆ (p) es una consonante bilabial aspirada. Su forma recuerda a un carácter antiguo que representaba un 'sonido de boca'.",
         "example_sentence": {
           "characters": "她是你們的好朋友。",
           "spanish_translation": "Ella es la buena amiga de ustedes.",
@@ -78,7 +84,7 @@
           "meaning": "avión",
           "zhuyin_typing": "ㄈㄟㄐㄧ"
         },
-        "note": "La forma del carácter ㄈ (f) se basa en la forma antigua de un carácter que significaba 'viento' o 'volar'.",
+        "note": "La forma del carácter ㄈ (f) se basa en la forma antigua del carácter **方** (fāng), que significa 'cuadrado' o 'dirección'.",
         "example_sentence": {
           "characters": "飛機在天空中飛。",
           "spanish_translation": "El avión está volando en el cielo.",
@@ -576,9 +582,9 @@
           "meaning": "Estados Unidos",
           "zhuyin_typing": "ㄇㄟˇㄍㄨㄛˊ"
         },
-        "note": "El carácter ㄟ (ei) es una vocal compuesta. Su forma se parece a un 'arco' o 'una ola' lo que refleja la transición del sonido de una vocal a otra.",
+        "note": "El carácter **ㄟ** (ei) es una vocal compuesta. Su forma se parece a un 'arco' o 'una ola' lo que refleja la transición del sonido de una vocal a otra. Este carácter se basa en el carácter chino **飛** (fēi), que significa 'volar'.",
         "example_sentence": {
-          "characters": "他們來自美國。",
+          "characters": "Ellos vienen de Estados Unidos.",
           "spanish_translation": "Ellos vienen de Estados Unidos.",
           "words": [
             {"characters": "他們", "pinyin": "tāmen", "meaning": "ellos/ellas", "zhuyin_typing": "ㄊㄚㄇㄣ˙"},
@@ -703,7 +709,7 @@
         },
         "note": "El carácter ㄥ (eng) es una vocal compuesta nasal. Su forma es similar a la de 'un cuerno' o 'un pico', lo que evoca un sonido que se concentra y se 'proyecta'.",
         "example_sentence": {
-          "characters": "他們是好朋友。",
+          "characters": "Ellos son buenos amigos.",
           "spanish_translation": "Ellos son buenos amigos.",
           "words": [
             {"characters": "他們", "pinyin": "tāmen", "meaning": "ellos/ellas", "zhuyin_typing": "ㄊㄚㄇㄣ˙"},
