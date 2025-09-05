@@ -6,6 +6,7 @@ class ZhuyinFlashcards {
         this.currentIndex = 0;
         this.isFlipped = false;
         this.audioBasePath = 'zhuyin_audios/';
+        this.currentAudio = null;
         
         // Settings
         this.settings = {
@@ -73,7 +74,7 @@ class ZhuyinFlashcards {
         // Action buttons
         document.getElementById('shuffleCards').addEventListener('click', () => this.shuffleCards());
         
-        // Audio buttons - Front
+        // Audio button - Front
         const zhuyinSoundBtn = document.getElementById('playZhuyinSound');
         if (zhuyinSoundBtn) {
             zhuyinSoundBtn.addEventListener('click', (e) => {
@@ -87,6 +88,7 @@ class ZhuyinFlashcards {
         
         // Settings
         document.getElementById('settingsToggle').addEventListener('click', () => this.toggleSettings());
+        document.getElementById('closeSettings').addEventListener('click', () => this.closeSettings());
         document.getElementById('showPinyin').addEventListener('change', (e) => {
             this.settings.showPinyin = e.target.checked;
             this.updatePinyinVisibility();
@@ -100,12 +102,10 @@ class ZhuyinFlashcards {
         document.addEventListener('click', (e) => {
             const settingsPanel = document.getElementById('settingsPanel');
             const settingsToggle = document.getElementById('settingsToggle');
-            const closeSettings = document.getElementById('closeSettings');
             
             if (!settingsPanel.contains(e.target) && 
-                !settingsToggle.contains(e.target) && 
-                !closeSettings.contains(e.target)) {
-                settingsPanel.classList.remove('open');
+                !settingsToggle.contains(e.target)) {
+                this.closeSettings();
             }
         });
     }
@@ -113,20 +113,12 @@ class ZhuyinFlashcards {
     setupBackAudioButtons() {
         // These will be set up each time the back content is updated
         const playWordBtn = document.getElementById('playWord');
-        const playZhuyinWordBtn = document.getElementById('playZhuyinWord');
         const playSentenceBtn = document.getElementById('playSentence');
         
         if (playWordBtn) {
             playWordBtn.addEventListener('click', (e) => {
                 e.stopPropagation();
                 this.playWordAudio();
-            });
-        }
-        
-        if (playZhuyinWordBtn) {
-            playZhuyinWordBtn.addEventListener('click', (e) => {
-                e.stopPropagation();
-                this.playZhuyinWordAudio();
             });
         }
         
@@ -320,7 +312,7 @@ class ZhuyinFlashcards {
                     </button>
                 `;
                 
-                // Agregar event listener con stopPropagation
+                // Add event listener with stopPropagation
                 const audioBtn = wordItem.querySelector('.word-audio');
                 audioBtn.addEventListener('click', (e) => {
                     e.stopPropagation();
@@ -359,14 +351,6 @@ class ZhuyinFlashcards {
         }
     }
 
-    playZhuyinWordAudio() {
-        const currentCard = this.currentCards[this.currentIndex];
-        if (currentCard.example_word) {
-            const audioPath = this.getZhuyinWordAudioPath(currentCard);
-            this.playAudio(audioPath, 'playZhuyinWord');
-        }
-    }
-
     playSentenceAudio() {
         const currentCard = this.currentCards[this.currentIndex];
         if (currentCard.example_sentence) {
@@ -381,8 +365,8 @@ class ZhuyinFlashcards {
     }
 
     getZhuyinSoundPath(card) {
-        // Para el sonido individual del carácter zhuyin
-        let pinyinClean = card.pinyin.split(' ')[0]; // En caso de que tenga espacios
+        // For individual zhuyin character sound
+        let pinyinClean = card.pinyin.split(' ')[0]; // In case it has spaces
         return `${this.audioBasePath}zhuyin_sounds/${this.sanitizeFilename(card.zhuyin)}_${pinyinClean}.mp3`;
     }
 
@@ -395,11 +379,6 @@ class ZhuyinFlashcards {
         } else {
             return `${this.audioBasePath}${category}/${this.sanitizeFilename(card.zhuyin)}_${this.sanitizeFilename(word.characters)}_${word.pinyin}.mp3`;
         }
-    }
-
-    getZhuyinWordAudioPath(card) {
-        const word = card.example_word;
-        return `${this.audioBasePath}zhuyin_typing/words/${this.sanitizeFilename(card.zhuyin)}_${this.sanitizeFilename(word.characters)}_zhuyin.mp3`;
     }
 
     getSentenceAudioPath(card) {
@@ -454,7 +433,7 @@ class ZhuyinFlashcards {
         }
         
         // Remove playing class from all audio buttons
-        document.querySelectorAll('.audio-btn.playing').forEach(btn => {
+        document.querySelectorAll('.audio-btn.playing, .front-audio-btn.playing').forEach(btn => {
             btn.classList.remove('playing');
         });
     }
@@ -469,14 +448,19 @@ class ZhuyinFlashcards {
         panel.classList.toggle('open');
     }
 
+    closeSettings() {
+        const panel = document.getElementById('settingsPanel');
+        panel.classList.remove('open');
+    }
+
     loadSettings() {
-        const saved = localStorage.getItem('zhuyinFlashcardsSettings');
-        if (saved) {
-            try {
+        try {
+            const saved = localStorage.getItem('zhuyinFlashcardsSettings');
+            if (saved) {
                 this.settings = { ...this.settings, ...JSON.parse(saved) };
-            } catch (e) {
-                console.warn('Error loading settings:', e);
             }
+        } catch (e) {
+            console.warn('Error loading settings:', e);
         }
         
         // Apply loaded settings
