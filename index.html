@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Zhuyin Flashcards - Aprende Bopomofo</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <!-- Header -->
+        <header class="header">
+            <h1><i class="fas fa-language"></i> Zhuyin Flashcards</h1>
+            <p>Aprende el sistema Bopomofo con flashcards interactivas</p>
+        </header>
+
+        <!-- Controls -->
+        <div class="controls">
+            <div class="filter-controls">
+                <button class="filter-btn active" data-filter="all">
+                    <i class="fas fa-list"></i> Todos
+                </button>
+                <button class="filter-btn" data-filter="consonants">
+                    <i class="fas fa-microphone"></i> Consonantes
+                </button>
+                <button class="filter-btn" data-filter="vowels">
+                    <i class="fas fa-volume-up"></i> Vocales
+                </button>
+                <button class="filter-btn" data-filter="tones">
+                    <i class="fas fa-music"></i> Tonos
+                </button>
+            </div>
+
+            <div class="navigation-controls">
+                <button id="prevCard" class="nav-btn">
+                    <i class="fas fa-chevron-left"></i> Anterior
+                </button>
+                <span class="card-counter">
+                    <span id="currentCard">1</span> / <span id="totalCards">0</span>
+                </span>
+                <button id="nextCard" class="nav-btn">
+                    Siguiente <i class="fas fa-chevron-right"></i>
+                </button>
+            </div>
+
+            <div class="action-controls">
+                <button id="shuffleCards" class="action-btn">
+                    <i class="fas fa-random"></i> Mezclar
+                </button>
+            </div>
+        </div>
+
+        <!-- Flashcard -->
+        <div class="flashcard-container">
+            <div class="flashcard" id="flashcard">
+                <!-- Front of card -->
+                <div class="card-face card-front">
+                    <div class="zhuyin-character">
+                        <span id="zhuyinChar">ㄅ</span>
+                    </div>
+                    <div class="pinyin-equivalent">
+                        <span id="pinyinEquiv">b</span>
+                    </div>
+                    <div class="front-audio-controls">
+                        <button class="front-audio-btn" id="playZhuyinSound">
+                            <i class="fas fa-play"></i> Escuchar
+                        </button>
+                    </div>
+                    <div class="card-hint">
+                        <i class="fas fa-mouse-pointer"></i> Click para voltear
+                    </div>
+                </div>
+
+                <!-- Back of card -->
+                <div class="card-face card-back">
+                    <div class="card-content">
+                        <!-- Example Word Section -->
+                        <div class="info-section">
+                            <h3><i class="fas fa-book"></i> Palabra Ejemplo</h3>
+                            <div class="word-info">
+                                <div class="characters" id="exampleChars">爸爸</div>
+                                <div class="pinyin" id="examplePinyin">bà ba</div>
+                                <div class="meaning" id="exampleMeaning">papá</div>
+                                <div class="zhuyin-typing" id="exampleZhuyin">ㄅㄚˋㄅㄚ˙</div>
+                            </div>
+                            <div class="audio-controls">
+                                <button class="audio-btn" id="playWord">
+                                    <i class="fas fa-play"></i> Palabra
+                                </button>
+                            </div>
+                        </div>
+
+                        <!-- Example Sentence Section -->
+                        <div class="info-section">
+                            <h3><i class="fas fa-quote-left"></i> Frase Ejemplo</h3>
+                            <div class="sentence-info">
+                                <div class="sentence-chars" id="sentenceChars">我的爸爸很高。</div>
+                                <div class="sentence-translation" id="sentenceTranslation"></div>
+                            </div>
+                            <div class="audio-controls">
+                                <button class="audio-btn" id="playSentence">
+                                    <i class="fas fa-play"></i> Frase Completa
+                                </button>
+                            </div>
+                        </div>
+
+                        <!-- Word Breakdown Section -->
+                        <div class="info-section">
+                            <h3><i class="fas fa-puzzle-piece"></i> Análisis de Palabras</h3>
+                            <div class="word-breakdown" id="wordBreakdown">
+                                <!-- Se llenará dinámicamente -->
+                            </div>
+                        </div>
+
+                        <!-- Back button -->
+                        <div class="back-button">
+                            <button class="flip-btn">
+                                <i class="fas fa-undo"></i> Volver al frente
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Progress -->
+        <div class="progress-container">
+            <div class="progress-bar">
+                <div class="progress-fill" id="progressFill"></div>
+            </div>
+        </div>
+
+        <!-- Settings Panel -->
+        <div class="settings-panel" id="settingsPanel">
+            <div class="settings-header">
+                <h3><i class="fas fa-cog"></i> Configuración</h3>
+                <button class="close-settings" id="closeSettings">
+                    <i class="fas fa-times"></i>
+                </button>
+            </div>
+            <div class="setting-item">
+                <label>
+                    <input type="checkbox" id="showPinyin" checked> Mostrar pinyin en frente
+                </label>
+            </div>
+        </div>
+
+        <!-- Settings Toggle -->
+        <button class="settings-toggle" id="settingsToggle">
+            <i class="fas fa-cog"></i>
+        </button>
+
+        <!-- Loading Indicator -->
+        <div class="loading" id="loading">
+            <div class="spinner"></div>
+            <p>Cargando datos de Zhuyin...</p>
+        </div>
+
+        <!-- Error Message -->
+        <div class="error-message" id="errorMessage" style="display: none;">
+            <i class="fas fa-exclamation-triangle"></i>
+            <p>Error al cargar los datos. Asegúrate de que el archivo 'zhuyin_data.json' esté disponible.</p>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

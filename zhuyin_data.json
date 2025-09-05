@@ -1,0 +1,776 @@
+{
+  "zhuyin_system": {
+    "consonants": [
+      {
+        "zhuyin": "ㄅ",
+        "pinyin": "b",
+        "example_word": {
+          "characters": "爸爸",
+          "pinyin": "bàba",
+          "meaning": "papá",
+          "zhuyin_typing": "ㄅㄚˋㄅㄚ˙"
+        },
+        "example_sentence": {
+          "characters": "我的爸爸很高。",
+          "words": [
+            {"characters": "我", "pinyin": "wǒ", "meaning": "yo", "zhuyin_typing": "ㄨㄛˇ"},
+            {"characters": "的", "pinyin": "de", "meaning": "partícula posesiva", "zhuyin_typing": "ㄉㄜ˙"},
+            {"characters": "爸爸", "pinyin": "bàba", "meaning": "papá", "zhuyin_typing": "ㄅㄚˋㄅㄚ˙"},
+            {"characters": "很", "pinyin": "hěn", "meaning": "muy", "zhuyin_typing": "ㄏㄣˇ"},
+            {"characters": "高", "pinyin": "gāo", "meaning": "alto", "zhuyin_typing": "ㄍㄠ"}
+          ]
+        }
+      },
+      {
+        "zhuyin": "ㄆ",
+        "pinyin": "p",
+        "example_word": {
+          "characters": "朋友",
+          "pinyin": "péngyǒu",
+          "meaning": "amigo",
+          "zhuyin_typing": "ㄆㄥˊㄧㄡˇ"
+        },
+        "example_sentence": {
+          "characters": "他是我的好朋友。",
+          "words": [
+            {"characters": "他", "pinyin": "tā", "meaning": "él", "zhuyin_typing": "ㄊㄚ"},
+            {"characters": "是", "pinyin": "shì", "meaning": "ser/estar", "zhuyin_typing": "ㄕˋ"},
+            {"characters": "我", "pinyin": "wǒ", "meaning": "yo", "zhuyin_typing": "ㄨㄛˇ"},
+            {"characters": "的", "pinyin": "de", "meaning": "partícula posesiva", "zhuyin_typing": "ㄉㄜ˙"},
+            {"characters": "好", "pinyin": "hǎo", "meaning": "bueno", "zhuyin_typing": "ㄏㄠˇ"},
+            {"characters": "朋友", "pinyin": "péngyǒu", "meaning": "amigo", "zhuyin_typing": "ㄆㄥˊㄧㄡˇ"}
+          ]
+        }
+      },
+      {
+        "zhuyin": "ㄇ",
+        "pinyin": "m",
+        "example_word": {
+          "characters": "媽媽",
+          "pinyin": "māma",
+          "meaning": "mamá",
+          "zhuyin_typing": "ㄇㄚㄇㄚ˙"
+        },
+        "example_sentence": {
+          "characters": "媽媽在廚房做飯。",
+          "words": [
+            {"characters": "媽媽", "pinyin": "māma", "meaning": "mamá", "zhuyin_typing": "ㄇㄚㄇㄚ˙"},
+            {"characters": "在", "pinyin": "zài", "meaning": "estar en", "zhuyin_typing": "ㄗㄞˋ"},
+            {"characters": "廚房", "pinyin": "chúfáng", "meaning": "cocina", "zhuyin_typing": "ㄔㄨˊㄈㄤˊ"},
+            {"characters": "做飯", "pinyin": "zuòfàn", "meaning": "cocinar", "zhuyin_typing": "ㄗㄨㄛˋㄈㄢˋ"}
+          ]
+        }
+      },
+      {
+        "zhuyin": "ㄈ",
+        "pinyin": "f",
+        "example_word": {
+          "characters": "飛機",
+          "pinyin": "fēijī",
+          "meaning": "avión",
+          "zhuyin_typing": "ㄈㄟㄐㄧ"
+        },
+        "example_sentence": {
+          "characters": "飛機在天空中飛。",
+          "words": [
+            {"characters": "飛機", "pinyin": "fēijī", "meaning": "avión", "zhuyin_typing": "ㄈㄟㄐㄧ"},
+            {"characters": "在", "pinyin": "zài", "meaning": "estar en", "zhuyin_typing": "ㄗㄞˋ"},
+            {"characters": "天空", "pinyin": "tiānkōng", "meaning": "cielo", "zhuyin_typing": "ㄊㄧㄢㄎㄨㄥ"},
+            {"characters": "中", "pinyin": "zhōng", "meaning": "en/dentro", "zhuyin_typing": "ㄓㄨㄥ"},
+            {"characters": "飛", "pinyin": "fēi", "meaning": "volar", "zhuyin_typing": "ㄈㄟ"}
+          ]
+        }
+      },
+      {
+        "zhuyin": "ㄉ",
+        "pinyin": "d",
+        "example_word": {
+          "characters": "大學",
+          "pinyin": "dàxué",
+          "meaning": "universidad",
+          "zhuyin_typing": "ㄉㄚˋㄒㄩㄝˊ"
+        },
+        "example_sentence": {
+          "characters": "我在大學學習中文。",
+          "words": [
+            {"characters": "我", "pinyin": "wǒ", "meaning": "yo", "zhuyin_typing": "ㄨㄛˇ"},
+            {"characters": "在", "pinyin": "zài", "meaning": "estar en", "zhuyin_typing": "ㄗㄞˋ"},
+            {"characters": "大學", "pinyin": "dàxué", "meaning": "universidad", "zhuyin_typing": "ㄉㄚˋㄒㄩㄝˊ"},
+            {"characters": "學習", "pinyin": "xuéxí", "meaning": "estudiar", "zhuyin_typing": "ㄒㄩㄝˊㄒㄧˊ"},
+            {"characters": "中文", "pinyin": "zhōngwén", "meaning": "chino", "zhuyin_typing": "ㄓㄨㄥㄨㄣˊ"}
+          ]
+        }
+      },
+      {
+        "zhuyin": "ㄊ",
+        "pinyin": "t",
+        "example_word": {
+          "characters": "太陽",
+          "pinyin": "tàiyáng",
+          "meaning": "sol",
+          "zhuyin_typing": "ㄊㄞˋㄧㄤˊ"
+        },
+        "example_sentence": {
+          "characters": "太陽很亮。",
+          "words": [
+            {"characters": "太陽", "pinyin": "tàiyáng", "meaning": "sol", "zhuyin_typing": "ㄊㄞˋㄧㄤˊ"},
+            {"characters": "很", "pinyin": "hěn", "meaning": "muy", "zhuyin_typing": "ㄏㄣˇ"},
+            {"characters": "亮", "pinyin": "liàng", "meaning": "brillante", "zhuyin_typing": "ㄌㄧㄤˋ"}
+          ]
+        }
+      },
+      {
+        "zhuyin": "ㄋ",
+        "pinyin": "n",
+        "example_word": {
+          "characters": "你好",
+          "pinyin": "nǐhǎo",
+          "meaning": "hola",
+          "zhuyin_typing": "ㄋㄧˇㄏㄠˇ"
+        },
+        "example_sentence": {
+          "characters": "你好，很高興見到你。",
+          "words": [
+            {"characters": "你好", "pinyin": "nǐhǎo", "meaning": "hola", "zhuyin_typing": "ㄋㄧˇㄏㄠˇ"},
+            {"characters": "很", "pinyin": "hěn", "meaning": "muy", "zhuyin_typing": "ㄏㄣˇ"},
+            {"characters": "高興", "pinyin": "gāoxìng", "meaning": "feliz/contento", "zhuyin_typing": "ㄍㄠㄒㄧㄥˋ"},
+            {"characters": "見到", "pinyin": "jiàndào", "meaning": "ver/conocer", "zhuyin_typing": "ㄐㄧㄢˋㄉㄠˋ"},
+            {"characters": "你", "pinyin": "nǐ", "meaning": "tú", "zhuyin_typing": "ㄋㄧˇ"}
+          ]
+        }
+      },
+      {
+        "zhuyin": "ㄌ",
+        "pinyin": "l",
+        "example_word": {
+          "characters": "老師",
+          "pinyin": "lǎoshī",
+          "meaning": "profesor",
+          "zhuyin_typing": "ㄌㄠˇㄕ"
+        },
+        "example_sentence": {
+          "characters": "老師教我們中文。",
+          "words": [
+            {"characters": "老師", "pinyin": "lǎoshī", "meaning": "profesor", "zhuyin_typing": "ㄌㄠˇㄕ"},
+            {"characters": "教", "pinyin": "jiāo", "meaning": "enseñar", "zhuyin_typing": "ㄐㄧㄠ"},
+            {"characters": "我們", "pinyin": "wǒmen", "meaning": "nosotros", "zhuyin_typing": "ㄨㄛˇㄇㄣ˙"},
+            {"characters": "中文", "pinyin": "zhōngwén", "meaning": "chino", "zhuyin_typing": "ㄓㄨㄥㄨㄣˊ"}
+          ]
+        }
+      },
+      {
+        "zhuyin": "ㄍ",
+        "pinyin": "g",
+        "example_word": {
+          "characters": "狗",
+          "pinyin": "gǒu",
+          "meaning": "perro",
+          "zhuyin_typing": "ㄍㄡˇ"
+        },
+        "example_sentence": {
+          "characters": "這隻狗很可愛。",
+          "words": [
+            {"characters": "這", "pinyin": "zhè", "meaning": "este", "zhuyin_typing": "ㄓㄜˋ"},
+            {"characters": "隻", "pinyin": "zhī", "meaning": "clasificador para animales", "zhuyin_typing": "ㄓ"},
+            {"characters": "狗", "pinyin": "gǒu", "meaning": "perro", "zhuyin_typing": "ㄍㄡˇ"},
+            {"characters": "很", "pinyin": "hěn", "meaning": "muy", "zhuyin_typing": "ㄏㄣˇ"},
+            {"characters": "可愛", "pinyin": "kě'ài", "meaning": "lindo/adorable", "zhuyin_typing": "ㄎㄜˇㄞˋ"}
+          ]
+        }
+      },
+      {
+        "zhuyin": "ㄎ",
+        "pinyin": "k",
+        "example_word": {
+          "characters": "咖啡",
+          "pinyin": "kāfēi",
+          "meaning": "café",
+          "zhuyin_typing": "ㄎㄚㄈㄟ"
+        },
+        "example_sentence": {
+          "characters": "我喜歡喝咖啡。",
+          "words": [
+            {"characters": "我", "pinyin": "wǒ", "meaning": "yo", "zhuyin_typing": "ㄨㄛˇ"},
+            {"characters": "喜歡", "pinyin": "xǐhuan", "meaning": "gustar", "zhuyin_typing": "ㄒㄧˇㄏㄨㄢ˙"},
+            {"characters": "喝", "pinyin": "hē", "meaning": "beber", "zhuyin_typing": "ㄏㄜ"},
+            {"characters": "咖啡", "pinyin": "kāfēi", "meaning": "café", "zhuyin_typing": "ㄎㄚㄈㄟ"}
+          ]
+        }
+      },
+      {
+        "zhuyin": "ㄏ",
+        "pinyin": "h",
+        "example_word": {
+          "characters": "好",
+          "pinyin": "hǎo",
+          "meaning": "bueno",
+          "zhuyin_typing": "ㄏㄠˇ"
+        },
+        "example_sentence": {
+          "characters": "今天天氣很好。",
+          "words": [
+            {"characters": "今天", "pinyin": "jīntiān", "meaning": "hoy", "zhuyin_typing": "ㄐㄧㄣㄊㄧㄢ"},
+            {"characters": "天氣", "pinyin": "tiānqì", "meaning": "clima", "zhuyin_typing": "ㄊㄧㄢㄑㄧˋ"},
+            {"characters": "很", "pinyin": "hěn", "meaning": "muy", "zhuyin_typing": "ㄏㄣˇ"},
+            {"characters": "好", "pinyin": "hǎo", "meaning": "bueno", "zhuyin_typing": "ㄏㄠˇ"}
+          ]
+        }
+      },
+      {
+        "zhuyin": "ㄐ",
+        "pinyin": "j",
+        "example_word": {
+          "characters": "家",
+          "pinyin": "jiā",
+          "meaning": "casa/hogar",
+          "zhuyin_typing": "ㄐㄧㄚ"
+        },
+        "example_sentence": {
+          "characters": "我的家在台北。",
+          "words": [
+            {"characters": "我", "pinyin": "wǒ", "meaning": "yo", "zhuyin_typing": "ㄨㄛˇ"},
+            {"characters": "的", "pinyin": "de", "meaning": "partícula posesiva", "zhuyin_typing": "ㄉㄜ˙"},
+            {"characters": "家", "pinyin": "jiā", "meaning": "casa", "zhuyin_typing": "ㄐㄧㄚ"},
+            {"characters": "在", "pinyin": "zài", "meaning": "estar en", "zhuyin_typing": "ㄗㄞˋ"},
+            {"characters": "台北", "pinyin": "táiběi", "meaning": "Taipei", "zhuyin_typing": "ㄊㄞˊㄅㄟˇ"}
+          ]
+        }
+      },
+      {
+        "zhuyin": "ㄑ",
+        "pinyin": "q",
+        "example_word": {
+          "characters": "錢",
+          "pinyin": "qián",
+          "meaning": "dinero",
+          "zhuyin_typing": "ㄑㄧㄢˊ"
+        },
+        "example_sentence": {
+          "characters": "他有很多錢。",
+          "words": [
+            {"characters": "他", "pinyin": "tā", "meaning": "él", "zhuyin_typing": "ㄊㄚ"},
+            {"characters": "有", "pinyin": "yǒu", "meaning": "tener", "zhuyin_typing": "ㄧㄡˇ"},
+            {"characters": "很多", "pinyin": "hěnduō", "meaning": "mucho", "zhuyin_typing": "ㄏㄣˇㄉㄨㄛ"},
+            {"characters": "錢", "pinyin": "qián", "meaning": "dinero", "zhuyin_typing": "ㄑㄧㄢˊ"}
+          ]
+        }
+      },
+      {
+        "zhuyin": "ㄒ",
+        "pinyin": "x",
+        "example_word": {
+          "characters": "學校",
+          "pinyin": "xuéxiào",
+          "meaning": "escuela",
+          "zhuyin_typing": "ㄒㄩㄝˊㄒㄧㄠˋ"
+        },
+        "example_sentence": {
+          "characters": "孩子們在學校學習。",
+          "words": [
+            {"characters": "孩子們", "pinyin": "háizimen", "meaning": "niños", "zhuyin_typing": "ㄏㄞˊㄗ˙ㄇㄣ˙"},
+            {"characters": "在", "pinyin": "zài", "meaning": "estar en", "zhuyin_typing": "ㄗㄞˋ"},
+            {"characters": "學校", "pinyin": "xuéxiào", "meaning": "escuela", "zhuyin_typing": "ㄒㄩㄝˊㄒㄧㄠˋ"},
+            {"characters": "學習", "pinyin": "xuéxí", "meaning": "estudiar", "zhuyin_typing": "ㄒㄩㄝˊㄒㄧˊ"}
+          ]
+        }
+      },
+      {
+        "zhuyin": "ㄓ",
+        "pinyin": "zh",
+        "example_word": {
+          "characters": "中國",
+          "pinyin": "zhōngguó",
+          "meaning": "China",
+          "zhuyin_typing": "ㄓㄨㄥㄍㄨㄛˊ"
+        },
+        "example_sentence": {
+          "characters": "中國是一個大國家。",
+          "words": [
+            {"characters": "中國", "pinyin": "zhōngguó", "meaning": "China", "zhuyin_typing": "ㄓㄨㄥㄍㄨㄛˊ"},
+            {"characters": "是", "pinyin": "shì", "meaning": "ser/estar", "zhuyin_typing": "ㄕˋ"},
+            {"characters": "一個", "pinyin": "yíge", "meaning": "uno/un", "zhuyin_typing": "ㄧˊㄍㄜ˙"},
+            {"characters": "大", "pinyin": "dà", "meaning": "grande", "zhuyin_typing": "ㄉㄚˋ"},
+            {"characters": "國家", "pinyin": "guójiā", "meaning": "país", "zhuyin_typing": "ㄍㄨㄛˊㄐㄧㄚ"}
+          ]
+        }
+      },
+      {
+        "zhuyin": "ㄔ",
+        "pinyin": "ch",
+        "example_word": {
+          "characters": "吃飯",
+          "pinyin": "chīfàn",
+          "meaning": "comer",
+          "zhuyin_typing": "ㄔㄈㄢˋ"
+        },
+        "example_sentence": {
+          "characters": "我們一起吃飯吧。",
+          "words": [
+            {"characters": "我們", "pinyin": "wǒmen", "meaning": "nosotros", "zhuyin_typing": "ㄨㄛˇㄇㄣ˙"},
+            {"characters": "一起", "pinyin": "yìqǐ", "meaning": "juntos", "zhuyin_typing": "ㄧˋㄑㄧˇ"},
+            {"characters": "吃飯", "pinyin": "chīfàn", "meaning": "comer", "zhuyin_typing": "ㄔㄈㄢˋ"},
+            {"characters": "吧", "pinyin": "ba", "meaning": "partícula sugestiva", "zhuyin_typing": "ㄅㄚ˙"}
+          ]
+        }
+      },
+      {
+        "zhuyin": "ㄕ",
+        "pinyin": "sh",
+        "example_word": {
+          "characters": "書",
+          "pinyin": "shū",
+          "meaning": "libro",
+          "zhuyin_typing": "ㄕㄨ"
+        },
+        "example_sentence": {
+          "characters": "這本書很有趣。",
+          "words": [
+            {"characters": "這", "pinyin": "zhè", "meaning": "este", "zhuyin_typing": "ㄓㄜˋ"},
+            {"characters": "本", "pinyin": "běn", "meaning": "clasificador para libros", "zhuyin_typing": "ㄅㄣˇ"},
+            {"characters": "書", "pinyin": "shū", "meaning": "libro", "zhuyin_typing": "ㄕㄨ"},
+            {"characters": "很", "pinyin": "hěn", "meaning": "muy", "zhuyin_typing": "ㄏㄣˇ"},
+            {"characters": "有趣", "pinyin": "yǒuqù", "meaning": "interesante", "zhuyin_typing": "ㄧㄡˇㄑㄩˋ"}
+          ]
+        }
+      },
+      {
+        "zhuyin": "ㄖ",
+        "pinyin": "r",
+        "example_word": {
+          "characters": "人",
+          "pinyin": "rén",
+          "meaning": "persona",
+          "zhuyin_typing": "ㄖㄣˊ"
+        },
+        "example_sentence": {
+          "characters": "那個人很聰明。",
+          "words": [
+            {"characters": "那個", "pinyin": "nàge", "meaning": "ese/esa", "zhuyin_typing": "ㄋㄚˋㄍㄜ˙"},
+            {"characters": "人", "pinyin": "rén", "meaning": "persona", "zhuyin_typing": "ㄖㄣˊ"},
+            {"characters": "很", "pinyin": "hěn", "meaning": "muy", "zhuyin_typing": "ㄏㄣˇ"},
+            {"characters": "聰明", "pinyin": "cōngming", "meaning": "inteligente", "zhuyin_typing": "ㄘㄨㄥㄇㄧㄥˊ"}
+          ]
+        }
+      },
+      {
+        "zhuyin": "ㄗ",
+        "pinyin": "z",
+        "example_word": {
+          "characters": "早上",
+          "pinyin": "zǎoshang",
+          "meaning": "mañana",
+          "zhuyin_typing": "ㄗㄠˇㄕㄤ˙"
+        },
+        "example_sentence": {
+          "characters": "我早上七點起床。",
+          "words": [
+            {"characters": "我", "pinyin": "wǒ", "meaning": "yo", "zhuyin_typing": "ㄨㄛˇ"},
+            {"characters": "早上", "pinyin": "zǎoshang", "meaning": "mañana", "zhuyin_typing": "ㄗㄠˇㄕㄤ˙"},
+            {"characters": "七點", "pinyin": "qīdiǎn", "meaning": "siete en punto", "zhuyin_typing": "ㄑㄧㄉㄧㄢˇ"},
+            {"characters": "起床", "pinyin": "qǐchuáng", "meaning": "levantarse", "zhuyin_typing": "ㄑㄧˇㄔㄨㄤˊ"}
+          ]
+        }
+      },
+      {
+        "zhuyin": "ㄘ",
+        "pinyin": "c",
+        "example_word": {
+          "characters": "菜",
+          "pinyin": "cài",
+          "meaning": "comida/verdura",
+          "zhuyin_typing": "ㄘㄞˋ"
+        },
+        "example_sentence": {
+          "characters": "這道菜很好吃。",
+          "words": [
+            {"characters": "這", "pinyin": "zhè", "meaning": "este", "zhuyin_typing": "ㄓㄜˋ"},
+            {"characters": "道", "pinyin": "dào", "meaning": "clasificador para platos", "zhuyin_typing": "ㄉㄠˋ"},
+            {"characters": "菜", "pinyin": "cài", "meaning": "plato/comida", "zhuyin_typing": "ㄘㄞˋ"},
+            {"characters": "很", "pinyin": "hěn", "meaning": "muy", "zhuyin_typing": "ㄏㄣˇ"},
+            {"characters": "好吃", "pinyin": "hǎochī", "meaning": "delicioso", "zhuyin_typing": "ㄏㄠˇㄔ"}
+          ]
+        }
+      },
+      {
+        "zhuyin": "ㄙ",
+        "pinyin": "s",
+        "example_word": {
+          "characters": "三",
+          "pinyin": "sān",
+          "meaning": "tres",
+          "zhuyin_typing": "ㄙㄢ"
+        },
+        "example_sentence": {
+          "characters": "我有三個蘋果。",
+          "words": [
+            {"characters": "我", "pinyin": "wǒ", "meaning": "yo", "zhuyin_typing": "ㄨㄛˇ"},
+            {"characters": "有", "pinyin": "yǒu", "meaning": "tener", "zhuyin_typing": "ㄧㄡˇ"},
+            {"characters": "三個", "pinyin": "sānge", "meaning": "tres", "zhuyin_typing": "ㄙㄢㄍㄜ˙"},
+            {"characters": "蘋果", "pinyin": "píngguǒ", "meaning": "manzana", "zhuyin_typing": "ㄆㄧㄥˊㄍㄨㄛˇ"}
+          ]
+        }
+      }
+    ],
+    "vowels": [
+      {
+        "zhuyin": "ㄚ",
+        "pinyin": "a",
+        "example_word": {
+          "characters": "媽",
+          "pinyin": "mā",
+          "meaning": "mamá",
+          "zhuyin_typing": "ㄇㄚ"
+        },
+        "example_sentence": {
+          "characters": "我愛我的媽媽。",
+          "words": [
+            {"characters": "我", "pinyin": "wǒ", "meaning": "yo", "zhuyin_typing": "ㄨㄛˇ"},
+            {"characters": "愛", "pinyin": "ài", "meaning": "amar", "zhuyin_typing": "ㄞˋ"},
+            {"characters": "我的", "pinyin": "wǒde", "meaning": "mi", "zhuyin_typing": "ㄨㄛˇㄉㄜ˙"},
+            {"characters": "媽媽", "pinyin": "māma", "meaning": "mamá", "zhuyin_typing": "ㄇㄚㄇㄚ˙"}
+          ]
+        }
+      },
+      {
+        "zhuyin": "ㄛ",
+        "pinyin": "o",
+        "example_word": {
+          "characters": "我",
+          "pinyin": "wǒ",
+          "meaning": "yo",
+          "zhuyin_typing": "ㄨㄛˇ"
+        },
+        "example_sentence": {
+          "characters": "我是學生。",
+          "words": [
+            {"characters": "我", "pinyin": "wǒ", "meaning": "yo", "zhuyin_typing": "ㄨㄛˇ"},
+            {"characters": "是", "pinyin": "shì", "meaning": "ser/estar", "zhuyin_typing": "ㄕˋ"},
+            {"characters": "學生", "pinyin": "xuésheng", "meaning": "estudiante", "zhuyin_typing": "ㄒㄩㄝˊㄕㄥ"}
+          ]
+        }
+      },
+      {
+        "zhuyin": "ㄜ",
+        "pinyin": "e",
+        "example_word": {
+          "characters": "餓",
+          "pinyin": "è",
+          "meaning": "hambriento",
+          "zhuyin_typing": "ㄜˋ"
+        },
+        "example_sentence": {
+          "characters": "我很餓想吃飯。",
+          "words": [
+            {"characters": "我", "pinyin": "wǒ", "meaning": "yo", "zhuyin_typing": "ㄨㄛˇ"},
+            {"characters": "很", "pinyin": "hěn", "meaning": "muy", "zhuyin_typing": "ㄏㄣˇ"},
+            {"characters": "餓", "pinyin": "è", "meaning": "hambriento", "zhuyin_typing": "ㄜˋ"},
+            {"characters": "想", "pinyin": "xiǎng", "meaning": "querer", "zhuyin_typing": "ㄒㄧㄤˇ"},
+            {"characters": "吃飯", "pinyin": "chīfàn", "meaning": "comer", "zhuyin_typing": "ㄔㄈㄢˋ"}
+          ]
+        }
+      },
+      {
+        "zhuyin": "ㄝ",
+        "pinyin": "ê",
+        "example_word": {
+          "characters": "這",
+          "pinyin": "zhè",
+          "meaning": "este",
+          "zhuyin_typing": "ㄓㄜˋ"
+        },
+        "example_sentence": {
+          "characters": "這是我的房間。",
+          "words": [
+            {"characters": "這", "pinyin": "zhè", "meaning": "este", "zhuyin_typing": "ㄓㄜˋ"},
+            {"characters": "是", "pinyin": "shì", "meaning": "ser/estar", "zhuyin_typing": "ㄕˋ"},
+            {"characters": "我的", "pinyin": "wǒde", "meaning": "mi", "zhuyin_typing": "ㄨㄛˇㄉㄜ˙"},
+            {"characters": "房間", "pinyin": "fángjiān", "meaning": "habitación", "zhuyin_typing": "ㄈㄤˊㄐㄧㄢ"}
+          ]
+        }
+      },
+      {
+        "zhuyin": "ㄞ",
+        "pinyin": "ai",
+        "example_word": {
+          "characters": "愛",
+          "pinyin": "ài",
+          "meaning": "amor",
+          "zhuyin_typing": "ㄞˋ"
+        },
+        "example_sentence": {
+          "characters": "我愛學習中文。",
+          "words": [
+            {"characters": "我", "pinyin": "wǒ", "meaning": "yo", "zhuyin_typing": "ㄨㄛˇ"},
+            {"characters": "愛", "pinyin": "ài", "meaning": "amar", "zhuyin_typing": "ㄞˋ"},
+            {"characters": "學習", "pinyin": "xuéxí", "meaning": "estudiar", "zhuyin_typing": "ㄒㄩㄝˊㄒㄧˊ"},
+            {"characters": "中文", "pinyin": "zhōngwén", "meaning": "chino", "zhuyin_typing": "ㄓㄨㄥㄨㄣˊ"}
+          ]
+        }
+      },
+      {
+        "zhuyin": "ㄟ",
+        "pinyin": "ei",
+        "example_word": {
+          "characters": "美國",
+          "pinyin": "měiguó",
+          "meaning": "Estados Unidos",
+          "zhuyin_typing": "ㄇㄟˇㄍㄨㄛˊ"
+        },
+        "example_sentence": {
+          "characters": "他來自美國。",
+          "words": [
+            {"characters": "他", "pinyin": "tā", "meaning": "él", "zhuyin_typing": "ㄊㄚ"},
+            {"characters": "來自", "pinyin": "láizì", "meaning": "venir de", "zhuyin_typing": "ㄌㄞˊㄗˋ"},
+            {"characters": "美國", "pinyin": "měiguó", "meaning": "Estados Unidos", "zhuyin_typing": "ㄇㄟˇㄍㄨㄛˊ"}
+          ]
+        }
+      },
+      {
+        "zhuyin": "ㄠ",
+        "pinyin": "ao",
+        "example_word": {
+          "characters": "好",
+          "pinyin": "hǎo",
+          "meaning": "bueno",
+          "zhuyin_typing": "ㄏㄠˇ"
+        },
+        "example_sentence": {
+          "characters": "你好嗎？",
+          "words": [
+            {"characters": "你", "pinyin": "nǐ", "meaning": "tú", "zhuyin_typing": "ㄋㄧˇ"},
+            {"characters": "好", "pinyin": "hǎo", "meaning": "bueno/bien", "zhuyin_typing": "ㄏㄠˇ"},
+            {"characters": "嗎", "pinyin": "ma", "meaning": "partícula interrogativa", "zhuyin_typing": "ㄇㄚ˙"}
+          ]
+        }
+      },
+      {
+        "zhuyin": "ㄡ",
+        "pinyin": "ou",
+        "example_word": {
+          "characters": "走",
+          "pinyin": "zǒu",
+          "meaning": "caminar",
+          "zhuyin_typing": "ㄗㄡˇ"
+        },
+        "example_sentence": {
+          "characters": "我們一起走吧。",
+          "words": [
+            {"characters": "我們", "pinyin": "wǒmen", "meaning": "nosotros", "zhuyin_typing": "ㄨㄛˇㄇㄣ˙"},
+            {"characters": "一起", "pinyin": "yìqǐ", "meaning": "juntos", "zhuyin_typing": "ㄧˋㄑㄧˇ"},
+            {"characters": "走", "pinyin": "zǒu", "meaning": "caminar/ir", "zhuyin_typing": "ㄗㄡˇ"},
+            {"characters": "吧", "pinyin": "ba", "meaning": "partícula sugestiva", "zhuyin_typing": "ㄅㄚ˙"}
+          ]
+        }
+      },
+      {
+        "zhuyin": "ㄢ",
+        "pinyin": "an",
+        "example_word": {
+          "characters": "飯",
+          "pinyin": "fàn",
+          "meaning": "arroz/comida",
+          "zhuyin_typing": "ㄈㄢˋ"
+        },
+        "example_sentence": {
+          "characters": "我在吃晚飯。",
+          "words": [
+            {"characters": "我", "pinyin": "wǒ", "meaning": "yo", "zhuyin_typing": "ㄨㄛˇ"},
+            {"characters": "在", "pinyin": "zài", "meaning": "estar (acción en progreso)", "zhuyin_typing": "ㄗㄞˋ"},
+            {"characters": "吃", "pinyin": "chī", "meaning": "comer", "zhuyin_typing": "ㄔ"},
+            {"characters": "晚飯", "pinyin": "wǎnfàn", "meaning": "cena", "zhuyin_typing": "ㄨㄢˇㄈㄢˋ"}
+          ]
+        }
+      },
+      {
+        "zhuyin": "ㄣ",
+        "pinyin": "en",
+        "example_word": {
+          "characters": "門",
+          "pinyin": "mén",
+          "meaning": "puerta",
+          "zhuyin_typing": "ㄇㄣˊ"
+        },
+        "example_sentence": {
+          "characters": "請關門。",
+          "words": [
+            {"characters": "請", "pinyin": "qǐng", "meaning": "por favor", "zhuyin_typing": "ㄑㄧㄥˇ"},
+            {"characters": "關", "pinyin": "guān", "meaning": "cerrar", "zhuyin_typing": "ㄍㄨㄢ"},
+            {"characters": "門", "pinyin": "mén", "meaning": "puerta", "zhuyin_typing": "ㄇㄣˊ"}
+          ]
+        }
+      },
+      {
+        "zhuyin": "ㄤ",
+        "pinyin": "ang",
+        "example_word": {
+          "characters": "房間",
+          "pinyin": "fángjiān",
+          "meaning": "habitación",
+          "zhuyin_typing": "ㄈㄤˊㄐㄧㄢ"
+        },
+        "example_sentence": {
+          "characters": "我的房間很大。",
+          "words": [
+            {"characters": "我的", "pinyin": "wǒde", "meaning": "mi", "zhuyin_typing": "ㄨㄛˇㄉㄜ˙"},
+            {"characters": "房間", "pinyin": "fángjiān", "meaning": "habitación", "zhuyin_typing": "ㄈㄤˊㄐㄧㄢ"},
+            {"characters": "很", "pinyin": "hěn", "meaning": "muy", "zhuyin_typing": "ㄏㄣˇ"},
+            {"characters": "大", "pinyin": "dà", "meaning": "grande", "zhuyin_typing": "ㄉㄚˋ"}
+          ]
+        }
+      },
+      {
+        "zhuyin": "ㄥ",
+        "pinyin": "eng",
+        "example_word": {
+          "characters": "朋友",
+          "pinyin": "péngyǒu",
+          "meaning": "amigo",
+          "zhuyin_typing": "ㄆㄥˊㄧㄡˇ"
+        },
+        "example_sentence": {
+          "characters": "他們是好朋友。",
+          "words": [
+            {"characters": "他們", "pinyin": "tāmen", "meaning": "ellos", "zhuyin_typing": "ㄊㄚㄇㄣ˙"},
+            {"characters": "是", "pinyin": "shì", "meaning": "ser/estar", "zhuyin_typing": "ㄕˋ"},
+            {"characters": "好", "pinyin": "hǎo", "meaning": "bueno", "zhuyin_typing": "ㄏㄠˇ"},
+            {"characters": "朋友", "pinyin": "péngyǒu", "meaning": "amigo", "zhuyin_typing": "ㄆㄥˊㄧㄡˇ"}
+          ]
+        }
+      },
+      {
+        "zhuyin": "ㄦ",
+        "pinyin": "er",
+        "example_word": {
+          "characters": "兒子",
+          "pinyin": "érzi",
+          "meaning": "hijo",
+          "zhuyin_typing": "ㄦˊㄗ˙"
+        },
+        "example_sentence": {
+          "characters": "他有一個兒子。",
+          "words": [
+            {"characters": "他", "pinyin": "tā", "meaning": "él", "zhuyin_typing": "ㄊㄚ"},
+            {"characters": "有", "pinyin": "yǒu", "meaning": "tener", "zhuyin_typing": "ㄧㄡˇ"},
+            {"characters": "一個", "pinyin": "yíge", "meaning": "uno", "zhuyin_typing": "ㄧˊㄍㄜ˙"},
+            {"characters": "兒子", "pinyin": "érzi", "meaning": "hijo", "zhuyin_typing": "ㄦˊㄗ˙"}
+          ]
+        }
+      },
+      {
+        "zhuyin": "ㄧ",
+        "pinyin": "i",
+        "example_word": {
+          "characters": "一",
+          "pinyin": "yī",
+          "meaning": "uno",
+          "zhuyin_typing": "ㄧ"
+        },
+        "example_sentence": {
+          "characters": "一加一等於二。",
+          "words": [
+            {"characters": "一", "pinyin": "yī", "meaning": "uno", "zhuyin_typing": "ㄧ"},
+            {"characters": "加", "pinyin": "jiā", "meaning": "más", "zhuyin_typing": "ㄐㄧㄚ"},
+            {"characters": "一", "pinyin": "yī", "meaning": "uno", "zhuyin_typing": "ㄧ"},
+            {"characters": "等於", "pinyin": "děngyú", "meaning": "igual a", "zhuyin_typing": "ㄉㄥˇㄩˊ"},
+            {"characters": "二", "pinyin": "èr", "meaning": "dos", "zhuyin_typing": "ㄦˋ"}
+          ]
+        }
+      },
+      {
+        "zhuyin": "ㄨ",
+        "pinyin": "u",
+        "example_word": {
+          "characters": "五",
+          "pinyin": "wǔ",
+          "meaning": "cinco",
+          "zhuyin_typing": "ㄨˇ"
+        },
+        "example_sentence": {
+          "characters": "我有五本書。",
+          "words": [
+            {"characters": "我", "pinyin": "wǒ", "meaning": "yo", "zhuyin_typing": "ㄨㄛˇ"},
+            {"characters": "有", "pinyin": "yǒu", "meaning": "tener", "zhuyin_typing": "ㄧㄡˇ"},
+            {"characters": "五本", "pinyin": "wǔběn", "meaning": "cinco (libros)", "zhuyin_typing": "ㄨˇㄅㄣˇ"},
+            {"characters": "書", "pinyin": "shū", "meaning": "libro", "zhuyin_typing": "ㄕㄨ"}
+          ]
+        }
+      },
+      {
+        "zhuyin": "ㄩ",
+        "pinyin": "ü",
+        "example_word": {
+          "characters": "女兒",
+          "pinyin": "nǚ'ér",
+          "meaning": "hija",
+          "zhuyin_typing": "ㄋㄩˇㄦˊ"
+        },
+        "example_sentence": {
+          "characters": "她是我的女兒。",
+          "words": [
+            {"characters": "她", "pinyin": "tā", "meaning": "ella", "zhuyin_typing": "ㄊㄚ"},
+            {"characters": "是", "pinyin": "shì", "meaning": "ser/estar", "zhuyin_typing": "ㄕˋ"},
+            {"characters": "我的", "pinyin": "wǒde", "meaning": "mi", "zhuyin_typing": "ㄨㄛˇㄉㄜ˙"},
+            {"characters": "女兒", "pinyin": "nǚ'ér", "meaning": "hija", "zhuyin_typing": "ㄋㄩˇㄦˊ"}
+          ]
+        }
+      }
+    ],
+    "tones": [
+      {
+        "mark": "ˉ",
+        "tone_number": 1,
+        "description": "Tono alto y plano",
+        "example": {
+          "characters": "媽",
+          "pinyin": "mā",
+          "meaning": "mamá",
+          "zhuyin_typing": "ㄇㄚ"
+        }
+      },
+      {
+        "mark": "ˊ",
+        "tone_number": 2,
+        "description": "Tono ascendente",
+        "example": {
+          "characters": "麻",
+          "pinyin": "má",
+          "meaning": "cáñamo/entumecido",
+          "zhuyin_typing": "ㄇㄚˊ"
+        }
+      },
+      {
+        "mark": "ˇ",
+        "tone_number": 3,
+        "description": "Tono descendente-ascendente",
+        "example": {
+          "characters": "馬",
+          "pinyin": "mǎ",
+          "meaning": "caballo",
+          "zhuyin_typing": "ㄇㄚˇ"
+        }
+      },
+      {
+        "mark": "ˋ",
+        "tone_number": 4,
+        "description": "Tono descendente",
+        "example": {
+          "characters": "罵",
+          "pinyin": "mà",
+          "meaning": "regañar",
+          "zhuyin_typing": "ㄇㄚˋ"
+        }
+      },
+      {
+        "mark": "·",
+        "tone_number": 0,
+        "description": "Tono neutro",
+        "example": {
+          "characters": "嗎",
+          "pinyin": "ma",
+          "meaning": "partícula interrogativa",
+          "zhuyin_typing": "ㄇㄚ˙"
+        }
+      }
+    ]
+  }
+}
