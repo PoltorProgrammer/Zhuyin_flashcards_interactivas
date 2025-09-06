@@ -102,7 +102,7 @@ class ZhuyinAudioGenerator:
                 
             # Si el archivo ya existe, saltarlo
             if os.path.exists(filename):
-                print(f"  ⏭️  {os.path.basename(filename)} ya existe, saltando...")
+                print(f"  ⭐️  {os.path.basename(filename)} ya existe, saltando...")
                 return True
                 
             tts = gTTS(text=text, lang=lang, slow=False)
@@ -133,14 +133,15 @@ class ZhuyinAudioGenerator:
             print(f"  Generando consonante {zhuyin} ({pinyin}) como '{consonant_with_a}'")
             self.generate_audio(consonant_with_a, str(filename))
             
-        # Vocales - mantener sonido original
+        # CORRECCIÓN: Vocales - usar el carácter zhuyin en lugar del pinyin
         for vowel in self.data['zhuyin_system']['vowels']:
             zhuyin = vowel['zhuyin']
             pinyin = vowel['pinyin']
             
             filename = self.output_dir / "zhuyin_sounds" / f"{self.sanitize_filename(zhuyin)}_{pinyin}.mp3"
-            print(f"  Generando vocal {zhuyin} ({pinyin}) como '{pinyin}'")
-            self.generate_audio(pinyin, str(filename))
+            print(f"  Generando vocal {zhuyin} ({pinyin}) usando carácter zhuyin '{zhuyin}'")
+            # CAMBIO PRINCIPAL: usar zhuyin en lugar de pinyin para las vocales
+            self.generate_audio(zhuyin, str(filename))
             
     def generate_consonant_audios(self):
         """Genera audios para consonantes, sus palabras y frases"""
@@ -214,6 +215,39 @@ class ZhuyinAudioGenerator:
             filename = self.output_dir / "tones" / "examples" / f"tono_{tone_num}_{self.sanitize_filename(example['characters'])}_{example['pinyin']}.mp3"
             self.generate_audio(example['characters'], str(filename))
             
+    def regenerate_vowel_sounds_only(self):
+        """Regenera solo los sonidos de las vocales (útil para corregir el problema)"""
+        if not self.load_data():
+            return False
+            
+        if not self.check_internet_connection():
+            print("❌ Error: No hay conexión a internet. gTTS requiere conexión a internet.")
+            return False
+            
+        print("🔊 Regenerando SOLO los sonidos de vocales zhuyin...")
+        
+        # Crear directorio si no existe
+        sounds_dir = self.output_dir / "zhuyin_sounds"
+        sounds_dir.mkdir(parents=True, exist_ok=True)
+        
+        # Regenerar solo las vocales
+        for vowel in self.data['zhuyin_system']['vowels']:
+            zhuyin = vowel['zhuyin']
+            pinyin = vowel['pinyin']
+            
+            filename = sounds_dir / f"{self.sanitize_filename(zhuyin)}_{pinyin}.mp3"
+            
+            # Eliminar archivo existente si existe
+            if filename.exists():
+                filename.unlink()
+                print(f"  🗑️  Eliminado archivo previo: {filename.name}")
+            
+            print(f"  Regenerando vocal {zhuyin} ({pinyin}) usando carácter zhuyin '{zhuyin}'")
+            self.generate_audio(zhuyin, str(filename))
+            
+        print("✅ Regeneración de vocales completada!")
+        return True
+            
     def generate_all_audios(self):
         """Genera todos los audios"""
         if not self.load_data():
@@ -286,6 +320,7 @@ def main():
     parser.add_argument("--output", default="zhuyin_audios", help="Directorio de salida para audios")
     parser.add_argument("--clean", action="store_true", help="Limpiar archivos de audio existentes")
     parser.add_argument("--delay", type=float, default=1.0, help="Delay entre requests (segundos)")
+    parser.add_argument("--fix-vowels", action="store_true", help="Regenerar solo los sonidos de vocales (corrige problema de pronunciación)")
     
     args = parser.parse_args()
     
@@ -294,6 +329,14 @@ def main():
     
     if args.clean:
         generator.clean_audio_files()
+        return
+        
+    if args.fix_vowels:
+        success = generator.regenerate_vowel_sounds_only()
+        if success:
+            print("\n🎉 ¡Vocales corregidas exitosamente!")
+        else:
+            print("\n❌ Error al corregir las vocales.")
         return
         
     success = generator.generate_all_audios()
@@ -308,7 +351,8 @@ def main():
         print("  • tones/examples/: Ejemplos de tonos")
         print("  • individual_words/: Todas las palabras individuales")
         print("  • zhuyin_sounds/: Sonidos individuales de zhuyin")
-        print("  • zhuyin_typing/: Audios de descomposiciones zhuyin para practicar escritura")
+        print("\n💡 Si los sonidos de vocales están en inglés, ejecuta:")
+        print("    python zhuyin_audio_generator.py --fix-vowels")
     else:
         print("\n❌ El proceso no se completó correctamente.")
 

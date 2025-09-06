@@ -160,6 +160,19 @@ body {
     border: 2px solid rgba(102, 126, 234, 0.3);
 }
 
+/* Tone Description for tone cards */
+.tone-description {
+    font-size: 1.2rem;
+    color: #805ad5;
+    font-weight: 500;
+    margin-bottom: 20px;
+    background: rgba(128, 90, 213, 0.1);
+    padding: 8px 16px;
+    border-radius: 20px;
+    border: 2px solid rgba(128, 90, 213, 0.3);
+    font-style: italic;
+}
+
 /* Front Audio Controls */
 .front-audio-controls {
     margin-bottom: 20px;
@@ -425,6 +438,176 @@ body {
     box-shadow: 0 5px 15px rgba(113, 128, 150, 0.4);
 }
 
+/* Overview Mode Styles */
+.overview-container {
+    flex: 1;
+    padding: 20px;
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    border-radius: 20px;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    margin-bottom: 30px;
+}
+
+.overview-header {
+    text-align: center;
+    margin-bottom: 30px;
+    color: white;
+}
+
+.overview-header h2 {
+    font-size: 2rem;
+    margin-bottom: 10px;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+}
+
+.overview-stats {
+    font-size: 1.1rem;
+    opacity: 0.9;
+}
+
+.overview-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+    gap: 20px;
+    padding: 20px 0;
+}
+
+/* Mini Cards */
+.mini-card {
+    width: 180px;
+    height: 240px;
+    position: relative;
+    transform-style: preserve-3d;
+    transition: transform 0.6s ease;
+    cursor: pointer;
+    margin: 0 auto;
+}
+
+.mini-card.flipped {
+    transform: rotateY(180deg);
+}
+
+.mini-card-front,
+.mini-card-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+    border-radius: 15px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 15px;
+    text-align: center;
+}
+
+.mini-card-front {
+    background: linear-gradient(145deg, #ffffff, #f0f0f0);
+    border: 2px solid rgba(255,255,255,0.8);
+}
+
+.mini-card-back {
+    background: linear-gradient(145deg, #f7fafc, #edf2f7);
+    transform: rotateY(180deg);
+    border: 2px solid rgba(247, 250, 252, 0.8);
+}
+
+/* Mini Card Elements */
+.mini-zhuyin {
+    font-size: 3.5rem;
+    font-weight: bold;
+    color: #4a5568;
+    margin-bottom: 10px;
+    text-shadow: 1px 1px 2px rgba(0,0,0,0.1);
+}
+
+.mini-pinyin {
+    font-size: 1.1rem;
+    color: #667eea;
+    font-weight: 600;
+    margin-bottom: 8px;
+    background: rgba(102, 126, 234, 0.1);
+    padding: 4px 8px;
+    border-radius: 12px;
+    border: 1px solid rgba(102, 126, 234, 0.3);
+}
+
+.mini-tone-desc {
+    font-size: 0.8rem;
+    color: #805ad5;
+    font-weight: 500;
+    margin-bottom: 8px;
+    background: rgba(128, 90, 213, 0.1);
+    padding: 4px 8px;
+    border-radius: 10px;
+    border: 1px solid rgba(128, 90, 213, 0.3);
+    font-style: italic;
+    text-align: center;
+}
+
+.mini-word-chars {
+    font-size: 2rem;
+    font-weight: bold;
+    color: #2d3748;
+    margin-bottom: 8px;
+}
+
+.mini-word-pinyin {
+    font-size: 1rem;
+    color: #667eea;
+    margin-bottom: 5px;
+    font-style: italic;
+}
+
+.mini-word-meaning {
+    font-size: 0.9rem;
+    color: #718096;
+    margin-bottom: 10px;
+}
+
+.mini-audio-btn {
+    background: linear-gradient(135deg, #667eea, #764ba2);
+    color: white;
+    border: none;
+    padding: 6px 8px;
+    border-radius: 50%;
+    cursor: pointer;
+    font-size: 0.8rem;
+    transition: all 0.3s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 32px;
+    height: 32px;
+    box-shadow: 0 2px 8px rgba(102, 126, 234, 0.3);
+}
+
+.mini-audio-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(102, 126, 234, 0.4);
+}
+
+.mini-audio-btn:active {
+    transform: translateY(0);
+}
+
+.mini-audio-btn.playing {
+    background: linear-gradient(135deg, #48bb78, #38a169);
+    animation: pulse-playing 1s infinite;
+}
+
+/* Hover effects for mini cards */
+.mini-card:hover {
+    transform: translateY(-5px);
+}
+
+.mini-card.flipped:hover {
+    transform: rotateY(180deg) translateY(-5px);
+}
+
 /* Progress */
 .progress-container {
     margin-bottom: 20px;
@@ -629,6 +812,10 @@ body {
         font-size: 1.5rem;
     }
     
+    .tone-description {
+        font-size: 1rem;
+    }
+    
     .front-audio-btn {
         padding: 10px 16px;
         font-size: 0.8rem;
@@ -648,6 +835,33 @@ body {
         right: 10px;
         width: 45px;
         height: 45px;
+    }
+    
+    /* Overview responsive */
+    .overview-grid {
+        grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+        gap: 15px;
+    }
+    
+    .mini-card {
+        width: 150px;
+        height: 200px;
+    }
+    
+    .mini-zhuyin {
+        font-size: 2.8rem;
+    }
+    
+    .mini-pinyin {
+        font-size: 1rem;
+    }
+    
+    .mini-word-chars {
+        font-size: 1.6rem;
+    }
+    
+    .overview-header h2 {
+        font-size: 1.6rem;
     }
 }
 
@@ -678,6 +892,65 @@ body {
         padding: 6px 10px;
         font-size: 0.8rem;
     }
+    
+    /* Overview mobile responsive */
+    .overview-grid {
+        grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
+        gap: 10px;
+        padding: 10px 0;
+    }
+    
+    .mini-card {
+        width: 120px;
+        height: 160px;
+    }
+    
+    .mini-zhuyin {
+        font-size: 2.2rem;
+        margin-bottom: 6px;
+    }
+    
+    .mini-pinyin {
+        font-size: 0.8rem;
+        padding: 2px 6px;
+        margin-bottom: 6px;
+    }
+    
+    .mini-tone-desc {
+        font-size: 0.7rem;
+        padding: 2px 6px;
+        margin-bottom: 6px;
+    }
+    
+    .mini-word-chars {
+        font-size: 1.3rem;
+        margin-bottom: 6px;
+    }
+    
+    .mini-word-pinyin {
+        font-size: 0.8rem;
+        margin-bottom: 4px;
+    }
+    
+    .mini-word-meaning {
+        font-size: 0.7rem;
+        margin-bottom: 8px;
+    }
+    
+    .mini-audio-btn {
+        width: 28px;
+        height: 28px;
+        font-size: 0.7rem;
+        padding: 4px;
+    }
+    
+    .overview-header h2 {
+        font-size: 1.4rem;
+    }
+    
+    .overview-container {
+        padding: 15px;
+    }
 }
 
 /* Print Styles */
@@ -697,7 +970,7 @@ body {
 
 /* Accessibility */
 @media (prefers-reduced-motion: reduce) {
-    .flashcard {
+    .flashcard, .mini-card {
         transition: none;
     }
     
@@ -719,65 +992,26 @@ input:focus {
 
 /* High contrast mode support */
 @media (prefers-contrast: high) {
-    .card-front {
+    .card-front, .mini-card-front {
         background: white;
         border: 3px solid black;
     }
     
-    .card-back {
+    .card-back, .mini-card-back {
         background: white;
         border: 3px solid black;
     }
     
-    .zhuyin-character {
+    .zhuyin-character, .mini-zhuyin {
         color: black;
     }
     
-    .pinyin-equivalent {
+    .pinyin-equivalent, .mini-pinyin {
         color: black;
         border-color: black;
     }
-}
-
-/* Accessibility */
-@media (prefers-reduced-motion: reduce) {
-    .flashcard {
-        transition: none;
-    }
     
-    .zhuyin-character {
-        animation: none;
-    }
-    
-    .card-hint {
-        animation: none;
-    }
-}
-
-/* Focus styles for accessibility */
-button:focus,
-input:focus {
-    outline: 2px solid #667eea;
-    outline-offset: 2px;
-}
-
-/* High contrast mode support */
-@media (prefers-contrast: high) {
-    .card-front {
-        background: white;
-        border: 3px solid black;
-    }
-    
-    .card-back {
-        background: white;
-        border: 3px solid black;
-    }
-    
-    .zhuyin-character {
-        color: black;
-    }
-    
-    .pinyin-equivalent {
+    .tone-description, .mini-tone-desc {
         color: black;
         border-color: black;
     }

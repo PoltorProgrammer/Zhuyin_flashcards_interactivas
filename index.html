@@ -53,7 +53,7 @@
         </div>
 
         <!-- Flashcard -->
-        <div class="flashcard-container">
+        <div class="flashcard-container" id="flashcardContainer">
             <div class="flashcard" id="flashcard">
                 <!-- Front of card -->
                 <div class="card-face card-front">
@@ -62,6 +62,10 @@
                     </div>
                     <div class="pinyin-equivalent">
                         <span id="pinyinEquiv">b</span>
+                    </div>
+                    <!-- Tone description for tone cards -->
+                    <div class="tone-description" id="toneDescription" style="display: none;">
+                        <span id="toneDescText">Tono alto y plano</span>
                     </div>
                     <div class="front-audio-controls">
                         <button class="front-audio-btn" id="playZhuyinSound">
@@ -77,7 +81,7 @@
                 <div class="card-face card-back">
                     <div class="card-content">
                         <!-- Example Word Section -->
-                        <div class="info-section">
+                        <div class="info-section" id="wordSection">
                             <h3><i class="fas fa-book"></i> Palabra Ejemplo</h3>
                             <div class="word-info">
                                 <div class="characters" id="exampleChars">爸爸</div>
@@ -93,7 +97,7 @@
                         </div>
 
                         <!-- Example Sentence Section -->
-                        <div class="info-section">
+                        <div class="info-section" id="sentenceSection">
                             <h3><i class="fas fa-quote-left"></i> Frase Ejemplo</h3>
                             <div class="sentence-info">
                                 <div class="sentence-chars" id="sentenceChars">我的爸爸很高。</div>
@@ -107,7 +111,7 @@
                         </div>
 
                         <!-- Word Breakdown Section -->
-                        <div class="info-section">
+                        <div class="info-section" id="breakdownSection">
                             <h3><i class="fas fa-puzzle-piece"></i> Análisis de Palabras</h3>
                             <div class="word-breakdown" id="wordBreakdown">
                                 <!-- Se llenará dinámicamente -->
@@ -122,6 +126,19 @@
                         </div>
                     </div>
                 </div>
+            </div>
+        </div>
+
+        <!-- Overview Grid -->
+        <div class="overview-container" id="overviewContainer" style="display: none;">
+            <div class="overview-header">
+                <h2 id="overviewTitle">Vista General - Todos</h2>
+                <div class="overview-stats">
+                    <span id="overviewCount">0 elementos</span>
+                </div>
+            </div>
+            <div class="overview-grid" id="overviewGrid">
+                <!-- Se llenará dinámicamente con mini-cards -->
             </div>
         </div>
 
@@ -143,6 +160,11 @@
             <div class="setting-item">
                 <label>
                     <input type="checkbox" id="showPinyin" checked> Mostrar pinyin en frente
+                </label>
+            </div>
+            <div class="setting-item">
+                <label>
+                    <input type="checkbox" id="overviewMode"> Vista general (cuadrícula)
                 </label>
             </div>
         </div>
