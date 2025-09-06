@@ -8,6 +8,10 @@ class ZhuyinFlashcards {
         this.audioBasePath = 'zhuyin_audios/';
         this.currentAudio = null;
         
+        // Expanded overlay state
+        this.expandedCard = null;
+        this.isExpandedFlipped = false;
+        
         // Settings
         this.settings = {
             showPinyin: true,
@@ -104,6 +108,9 @@ class ZhuyinFlashcards {
             this.saveSettings();
         });
         
+        // Expanded overlay event listeners
+        this.setupExpandedOverlayEventListeners();
+        
         // Keyboard navigation
         document.addEventListener('keydown', (e) => this.handleKeyboard(e));
         
@@ -115,6 +122,75 @@ class ZhuyinFlashcards {
             if (!settingsPanel.contains(e.target) && 
                 !settingsToggle.contains(e.target)) {
                 this.closeSettings();
+            }
+        });
+    }
+
+    setupExpandedOverlayEventListeners() {
+        // Close button
+        const expandedCloseBtn = document.getElementById('expandedCloseBtn');
+        if (expandedCloseBtn) {
+            expandedCloseBtn.addEventListener('click', () => this.closeExpandedOverlay());
+        }
+        
+        // Expanded flashcard flip
+        const expandedFlashcard = document.getElementById('expandedFlashcard');
+        if (expandedFlashcard) {
+            expandedFlashcard.addEventListener('click', (e) => {
+                if (!e.target.closest('button')) {
+                    this.flipExpandedCard();
+                }
+            });
+        }
+        
+        // Expanded flip button
+        const expandedFlipBtn = document.getElementById('expandedFlipBtn');
+        if (expandedFlipBtn) {
+            expandedFlipBtn.addEventListener('click', (e) => {
+                e.stopPropagation();
+                this.flipExpandedCard();
+            });
+        }
+        
+        // Expanded audio buttons
+        const expandedPlayZhuyinSound = document.getElementById('expandedPlayZhuyinSound');
+        if (expandedPlayZhuyinSound) {
+            expandedPlayZhuyinSound.addEventListener('click', (e) => {
+                e.stopPropagation();
+                this.playExpandedZhuyinSound();
+            });
+        }
+        
+        const expandedPlayWord = document.getElementById('expandedPlayWord');
+        if (expandedPlayWord) {
+            expandedPlayWord.addEventListener('click', (e) => {
+                e.stopPropagation();
+                this.playExpandedWordAudio();
+            });
+        }
+        
+        const expandedPlaySentence = document.getElementById('expandedPlaySentence');
+        if (expandedPlaySentence) {
+            expandedPlaySentence.addEventListener('click', (e) => {
+                e.stopPropagation();
+                this.playExpandedSentenceAudio();
+            });
+        }
+        
+        // Close overlay when clicking background
+        const expandedOverlay = document.getElementById('expandedOverlay');
+        if (expandedOverlay) {
+            expandedOverlay.addEventListener('click', (e) => {
+                if (e.target === expandedOverlay || e.target.classList.contains('expanded-overlay-background')) {
+                    this.closeExpandedOverlay();
+                }
+            });
+        }
+        
+        // Handle Escape key for closing overlay
+        document.addEventListener('keydown', (e) => {
+            if (e.key === 'Escape' && this.expandedCard) {
+                this.closeExpandedOverlay();
             }
         });
     }
@@ -521,6 +597,16 @@ class ZhuyinFlashcards {
         const frontFace = document.createElement('div');
         frontFace.className = 'mini-card-front';
         
+        // Create expand button for front
+        const frontExpandBtn = document.createElement('button');
+        frontExpandBtn.className = 'mini-expand-btn';
+        frontExpandBtn.innerHTML = '<i class="fas fa-expand"></i>';
+        frontExpandBtn.addEventListener('click', (e) => {
+            e.stopPropagation();
+            this.showExpandedOverlay(card);
+        });
+        frontFace.appendChild(frontExpandBtn);
+        
         const zhuyinChar = document.createElement('div');
         zhuyinChar.className = 'mini-zhuyin';
         zhuyinChar.textContent = card.zhuyin;
@@ -553,6 +639,16 @@ class ZhuyinFlashcards {
         // Create back face
         const backFace = document.createElement('div');
         backFace.className = 'mini-card-back';
+        
+        // Create expand button for back
+        const backExpandBtn = document.createElement('button');
+        backExpandBtn.className = 'mini-expand-btn';
+        backExpandBtn.innerHTML = '<i class="fas fa-expand"></i>';
+        backExpandBtn.addEventListener('click', (e) => {
+            e.stopPropagation();
+            this.showExpandedOverlay(card);
+        });
+        backFace.appendChild(backExpandBtn);
         
         if (card.example_word) {
             const wordChars = document.createElement('div');
@@ -602,6 +698,253 @@ class ZhuyinFlashcards {
         });
         
         return miniCard;
+    }
+
+    // Expanded overlay methods
+    showExpandedOverlay(card) {
+        this.expandedCard = card;
+        this.isExpandedFlipped = false;
+        
+        const overlay = document.getElementById('expandedOverlay');
+        const expandedFlashcard = document.getElementById('expandedFlashcard');
+        
+        // Reset flip state
+        expandedFlashcard.classList.remove('flipped');
+        
+        // Update card content
+        this.updateExpandedCard();
+        
+        // Show overlay
+        overlay.style.display = 'flex';
+        
+        // Prevent body scroll
+        document.body.style.overflow = 'hidden';
+    }
+
+    closeExpandedOverlay() {
+        const overlay = document.getElementById('expandedOverlay');
+        
+        // Hide overlay
+        overlay.style.display = 'none';
+        
+        // Restore body scroll
+        document.body.style.overflow = 'auto';
+        
+        // Clear expanded card state
+        this.expandedCard = null;
+        this.isExpandedFlipped = false;
+        
+        // Stop any playing audio
+        this.stopCurrentAudio();
+    }
+
+    flipExpandedCard() {
+        this.isExpandedFlipped = !this.isExpandedFlipped;
+        const expandedFlashcard = document.getElementById('expandedFlashcard');
+        
+        if (this.isExpandedFlipped) {
+            expandedFlashcard.classList.add('flipped');
+            this.updateExpandedBackContent();
+        } else {
+            expandedFlashcard.classList.remove('flipped');
+        }
+    }
+
+    updateExpandedCard() {
+        if (!this.expandedCard) return;
+        
+        const card = this.expandedCard;
+        
+        // Update front content
+        document.getElementById('expandedZhuyinChar').textContent = card.zhuyin;
+        document.getElementById('expandedPinyinEquiv').textContent = card.pinyin;
+        
+        // Handle tone-specific front display
+        const toneDescription = document.getElementById('expandedToneDescription');
+        const toneDescText = document.getElementById('expandedToneDescText');
+        
+        if (card.type === 'tones') {
+            // Show tone description for tone cards
+            if (toneDescription && toneDescText) {
+                toneDescText.textContent = card.description;
+                toneDescription.style.display = 'block';
+            }
+        } else {
+            // Hide tone description for non-tone cards
+            if (toneDescription) {
+                toneDescription.style.display = 'none';
+            }
+        }
+        
+        // Update pinyin visibility based on settings
+        const pinyinElement = document.getElementById('expandedPinyinEquiv').parentElement;
+        if (pinyinElement) {
+            pinyinElement.style.display = this.settings.showPinyin ? 'block' : 'none';
+        }
+    }
+
+    updateExpandedBackContent() {
+        const card = this.expandedCard;
+        if (!card) return;
+        
+        // Show/hide sections based on card type
+        const wordSection = document.getElementById('expandedWordSection');
+        const sentenceSection = document.getElementById('expandedSentenceSection');
+        const breakdownSection = document.getElementById('expandedBreakdownSection');
+        const notesSection = document.getElementById('expandedNotesSection');
+        
+        if (card.type === 'tones') {
+            // For tone cards, show only word example, hide notes
+            if (wordSection) wordSection.style.display = 'block';
+            if (sentenceSection) sentenceSection.style.display = 'none';
+            if (breakdownSection) breakdownSection.style.display = 'none';
+            if (notesSection) notesSection.style.display = 'none';
+            
+            // Update word example
+            this.updateExpandedWordExample(card);
+        } else {
+            // For consonant and vowel cards, show all sections including notes
+            if (wordSection) wordSection.style.display = 'block';
+            if (sentenceSection) sentenceSection.style.display = 'block';
+            if (breakdownSection) breakdownSection.style.display = 'block';
+            if (notesSection) notesSection.style.display = 'block';
+            
+            // Update word example
+            this.updateExpandedWordExample(card);
+            
+            // Update sentence example
+            if (card.example_sentence) {
+                document.getElementById('expandedSentenceChars').textContent = card.example_sentence.characters;
+                this.updateExpandedSentenceTranslation(card.example_sentence);
+                this.updateExpandedWordBreakdown(card.example_sentence.words);
+            }
+            
+            // Update notes and mnemotecnia
+            this.updateExpandedNotesAndMnemotecnia(card);
+        }
+    }
+
+    updateExpandedWordExample(card) {
+        if (card.example_word) {
+            document.getElementById('expandedExampleChars').textContent = card.example_word.characters;
+            document.getElementById('expandedExamplePinyin').textContent = card.example_word.pinyin;
+            document.getElementById('expandedExampleMeaning').textContent = card.example_word.meaning;
+            
+            // Show zhuyin typing if available
+            const zhuyinTyping = document.getElementById('expandedExampleZhuyin');
+            if (card.example_word.zhuyin_typing) {
+                zhuyinTyping.textContent = card.example_word.zhuyin_typing;
+                zhuyinTyping.style.display = 'block';
+            } else {
+                zhuyinTyping.style.display = 'none';
+            }
+        }
+    }
+
+    updateExpandedSentenceTranslation(sentence) {
+        // Use spanish_translation directly instead of concatenating meanings
+        const sentenceTranslationElement = document.getElementById('expandedSentenceTranslation');
+        if (sentence.spanish_translation) {
+            sentenceTranslationElement.textContent = sentence.spanish_translation;
+        } else {
+            // Fallback to concatenating meanings if spanish_translation is not available
+            if (sentence.words) {
+                const translation = sentence.words.map(word => word.meaning).join(' ');
+                sentenceTranslationElement.textContent = translation;
+            }
+        }
+    }
+
+    updateExpandedWordBreakdown(words) {
+        const container = document.getElementById('expandedWordBreakdown');
+        container.innerHTML = '';
+        
+        if (words) {
+            words.forEach((word, index) => {
+                const wordItem = document.createElement('div');
+                wordItem.className = 'word-item';
+                
+                // Build the word information display
+                let wordInfoHtml = `
+                    <div>
+                        <span class="word-chars">${word.characters}</span>
+                        <span class="word-pinyin">${word.pinyin}</span>
+                `;
+                
+                // Add zhuyin_typing if available
+                if (word.zhuyin_typing) {
+                    wordInfoHtml += `<span class="word-zhuyin">${word.zhuyin_typing}</span>`;
+                }
+                
+                wordInfoHtml += `
+                    </div>
+                    <div class="word-meaning">${word.meaning}</div>
+                    <button class="word-audio" data-chars="${word.characters}" data-pinyin="${word.pinyin}">
+                        <i class="fas fa-volume-up"></i>
+                    </button>
+                `;
+                
+                wordItem.innerHTML = wordInfoHtml;
+                
+                // Add event listener with stopPropagation
+                const audioBtn = wordItem.querySelector('.word-audio');
+                audioBtn.addEventListener('click', (e) => {
+                    e.stopPropagation();
+                    this.playIndividualWordAudio(word.characters, word.pinyin);
+                });
+                
+                container.appendChild(wordItem);
+            });
+        }
+    }
+
+    updateExpandedNotesAndMnemotecnia(card) {
+        const noteText = document.getElementById('expandedNoteText');
+        const mnemotecniaText = document.getElementById('expandedMnemotecniaText');
+        
+        // Update note content
+        if (card.note && noteText) {
+            noteText.innerHTML = this.processMarkdown(card.note);
+        }
+        
+        // Update mnemotecnia content
+        if (card.mnemotecnia && mnemotecniaText) {
+            mnemotecniaText.innerHTML = this.processMarkdown(card.mnemotecnia);
+        }
+    }
+
+    // Expanded audio methods
+    playExpandedZhuyinSound() {
+        const card = this.expandedCard;
+        if (!card) return;
+        
+        let audioPath;
+        
+        if (card.type === 'tones') {
+            // For tones, play the example word directly
+            audioPath = this.getToneExampleAudioPath(card);
+        } else {
+            // For consonants and vowels, play the zhuyin sound
+            audioPath = this.getZhuyinSoundPath(card);
+        }
+        
+        this.playAudio(audioPath, 'expandedPlayZhuyinSound');
+    }
+
+    playExpandedWordAudio() {
+        const card = this.expandedCard;
+        if (!card || !card.example_word) return;
+        
+        const audioPath = this.getWordAudioPath(card);
+        this.playAudio(audioPath, 'expandedPlayWord');
+    }
+
+    playExpandedSentenceAudio() {
+        const card = this.expandedCard;
+        if (!card || !card.example_sentence) return;
+        
+        const audioPath = this.getSentenceAudioPath(card);
+        this.playAudio(audioPath, 'expandedPlaySentence');
     }
     
     playMiniCardAudio(card) {
@@ -816,7 +1159,12 @@ class ZhuyinFlashcards {
 
     // Keyboard navigation
     handleKeyboard(event) {
-        // Only handle keyboard in individual card mode
+        // Only handle keyboard in individual card mode, unless it's escape for closing overlay
+        if (event.key === 'Escape' && this.expandedCard) {
+            this.closeExpandedOverlay();
+            return;
+        }
+        
         if (this.settings.overviewMode) return;
         
         switch (event.key) {

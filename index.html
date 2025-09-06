@@ -200,6 +200,104 @@
             <i class="fas fa-exclamation-triangle"></i>
             <p>Error al cargar los datos. Asegúrate de que el archivo 'zhuyin_data.json' esté disponible.</p>
         </div>
+
+        <!-- Expanded Card Overlay -->
+        <div class="expanded-overlay" id="expandedOverlay" style="display: none;">
+            <div class="expanded-overlay-background"></div>
+            <div class="expanded-card-container">
+                <button class="expanded-close-btn" id="expandedCloseBtn">
+                    <i class="fas fa-times"></i>
+                </button>
+                <div class="expanded-flashcard" id="expandedFlashcard">
+                    <!-- Front of expanded card -->
+                    <div class="card-face card-front">
+                        <div class="zhuyin-character">
+                            <span id="expandedZhuyinChar">ㄅ</span>
+                        </div>
+                        <div class="pinyin-equivalent">
+                            <span id="expandedPinyinEquiv">b</span>
+                        </div>
+                        <!-- Tone description for tone cards -->
+                        <div class="tone-description" id="expandedToneDescription" style="display: none;">
+                            <span id="expandedToneDescText">Tono alto y plano</span>
+                        </div>
+                        <div class="front-audio-controls">
+                            <button class="front-audio-btn" id="expandedPlayZhuyinSound">
+                                <i class="fas fa-play"></i> Escuchar
+                            </button>
+                        </div>
+                        <div class="card-hint">
+                            <i class="fas fa-mouse-pointer"></i> Click para voltear
+                        </div>
+                    </div>
+
+                    <!-- Back of expanded card -->
+                    <div class="card-face card-back">
+                        <div class="card-content">
+                            <!-- Example Word Section -->
+                            <div class="info-section" id="expandedWordSection">
+                                <h3><i class="fas fa-book"></i> Palabra Ejemplo</h3>
+                                <div class="word-info">
+                                    <div class="characters" id="expandedExampleChars">爸爸</div>
+                                    <div class="pinyin" id="expandedExamplePinyin">bà ba</div>
+                                    <div class="meaning" id="expandedExampleMeaning">papá</div>
+                                    <div class="zhuyin-typing" id="expandedExampleZhuyin">ㄅㄚˋㄅㄚ˙</div>
+                                </div>
+                                <div class="audio-controls">
+                                    <button class="audio-btn" id="expandedPlayWord">
+                                        <i class="fas fa-play"></i> Palabra
+                                    </button>
+                                </div>
+                            </div>
+
+                            <!-- Example Sentence Section -->
+                            <div class="info-section" id="expandedSentenceSection">
+                                <h3><i class="fas fa-quote-left"></i> Frase Ejemplo</h3>
+                                <div class="sentence-info">
+                                    <div class="sentence-chars" id="expandedSentenceChars">我的爸爸很高。</div>
+                                    <div class="sentence-translation" id="expandedSentenceTranslation"></div>
+                                </div>
+                                <div class="audio-controls">
+                                    <button class="audio-btn" id="expandedPlaySentence">
+                                        <i class="fas fa-play"></i> Frase Completa
+                                    </button>
+                                </div>
+                            </div>
+
+                            <!-- Word Breakdown Section -->
+                            <div class="info-section" id="expandedBreakdownSection">
+                                <h3><i class="fas fa-puzzle-piece"></i> Análisis de Palabras</h3>
+                                <div class="word-breakdown" id="expandedWordBreakdown">
+                                    <!-- Se llenará dinámicamente -->
+                                </div>
+                            </div>
+
+                            <!-- Notes and Mnemotecnia Section -->
+                            <div class="info-section" id="expandedNotesSection">
+                                <h3><i class="fas fa-lightbulb"></i> Notas y Mnemotecnia</h3>
+                                <div class="notes-content">
+                                    <div class="note-item" id="expandedNoteContent">
+                                        <h4><i class="fas fa-info-circle"></i> Nota</h4>
+                                        <p id="expandedNoteText"></p>
+                                    </div>
+                                    <div class="note-item" id="expandedMnemotecniaContent">
+                                        <h4><i class="fas fa-brain"></i> Mnemotecnia</h4>
+                                        <p id="expandedMnemotecniaText"></p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Back button -->
+                            <div class="back-button">
+                                <button class="flip-btn" id="expandedFlipBtn">
+                                    <i class="fas fa-undo"></i> Volver al frente
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
 
     <script src="script.js"></script>

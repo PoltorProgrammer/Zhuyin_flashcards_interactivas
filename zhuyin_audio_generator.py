@@ -1,11 +1,11 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
 """
-Generador de Audios para Zhuyin/Bopomofo - VERSIÓN CORREGIDA
+Generador de Audios para Zhuyin/Bopomofo - VERSIÓN DEFINITIVA
 Genera automáticamente archivos de audio para palabras y frases en chino mandarín
 usando Google Text-to-Speech (gTTS)
 
-CORRECCIÓN: Arregla el problema de pronunciación para ㄒ, ㄘ, ㄈ y ㄓ
+CORRECCIÓN FINAL: Usa vocales apropiadas para consonantes que no funcionan con ㄚ
 """
 
 import json
@@ -31,14 +31,6 @@ class ZhuyinAudioGenerator:
         self.output_dir = Path(output_dir)
         self.data = None
         self.delay = 1  # Delay entre requests para evitar rate limiting
-        
-        # Consonantes problemáticas que necesitan tratamiento especial
-        self.problematic_consonants = {
-            'ㄒ': 'xi',   # xi -> debería sonar como "xia" 
-            'ㄘ': 'ci',   # ci -> debería sonar como "ca"
-            'ㄈ': 'f',    # f -> debería sonar como "fa"
-            'ㄓ': 'zhi'   # zhi -> debería sonar como "zha"
-        }
         
         # Crear directorios
         self.create_directories()
@@ -126,37 +118,68 @@ class ZhuyinAudioGenerator:
         except Exception as e:
             print(f"  ✗ Error generando {filename}: {str(e)}")
             return False
-            
+    
+    def get_appropriate_vowel_for_consonant(self, zhuyin_consonant):
+        """
+        Devuelve la vocal apropiada para una consonante zhuyin específica
+        Corrige el problema de consonantes que no pueden combinarse con ㄚ
+        """
+        # Consonantes que NO pueden usar ㄚ (a) porque crean combinaciones inexistentes
+        special_vowels = {
+            'ㄒ': 'ㄧ',  # xi (x + i) - natural en chino
+            'ㄑ': 'ㄧ',  # qi (q + i) - natural en chino
+            'ㄐ': 'ㄧ',  # ji (j + i) - natural en chino
+            'ㄖ': 'ㄨ',  # ru (r + u) - más natural que ra
+        }
+        
+        # Debug: mostrar qué consonante estamos procesando
+        if zhuyin_consonant in special_vowels:
+            vowel = special_vowels[zhuyin_consonant]
+            print(f"    🔧 DEBUG: Consonante especial detectada: '{zhuyin_consonant}' -> usando vocal '{vowel}'")
+            return vowel
+        else:
+            print(f"    ✓ DEBUG: Consonante normal: '{zhuyin_consonant}' -> usando vocal 'ㄚ'")
+            return 'ㄚ'
+    
     def generate_zhuyin_sounds(self):
         """Genera audios para los sonidos individuales de zhuyin - VERSIÓN CORREGIDA"""
         print("\n🔊 Generando audios para sonidos zhuyin individuales...")
+        print("🎯 Corrigiendo consonantes problemáticas: ㄒ, ㄑ, ㄐ, ㄖ")
+        print("🔍 Activando modo DEBUG para verificar procesamiento...")
         
-        # Consonantes - CORREGIDO para consonantes problemáticas
+        # Consonantes - CORREGIDO: Usa vocal apropiada para cada consonante
+        consonant_count = 0
+        special_count = 0
+        
         for consonant in self.data['zhuyin_system']['consonants']:
             zhuyin = consonant['zhuyin']
             pinyin = consonant['pinyin']
+            consonant_count += 1
             
             filename = self.output_dir / "zhuyin_sounds" / f"{self.sanitize_filename(zhuyin)}_{pinyin}.mp3"
             
-            # CORRECCIÓN PRINCIPAL: Para consonantes problemáticas, usar zhuyin + ㄚ
-            if zhuyin in self.problematic_consonants:
-                # Usar el carácter zhuyin + ㄚ (vocal 'a' en zhuyin)
-                consonant_sound = zhuyin + 'ㄚ'
-                print(f"  🔧 Generando consonante problemática {zhuyin} ({pinyin}) como '{consonant_sound}' (usando zhuyin)")
+            # Usar función dedicada para obtener la vocal correcta
+            vowel = self.get_appropriate_vowel_for_consonant(zhuyin)
+            consonant_sound = zhuyin + vowel
+            
+            if vowel != 'ㄚ':
+                special_count += 1
+                print(f"  🎵 [{consonant_count}] ESPECIAL: {zhuyin} ({pinyin}) como '{consonant_sound}'")
             else:
-                # Para el resto, usar pinyin + 'a' como antes
-                consonant_sound = pinyin + 'a'
-                print(f"  Generando consonante {zhuyin} ({pinyin}) como '{consonant_sound}' (usando pinyin)")
+                print(f"  🎵 [{consonant_count}] Normal: {zhuyin} ({pinyin}) como '{consonant_sound}'")
             
             self.generate_audio(consonant_sound, str(filename))
+        
+        print(f"\n📊 Resumen: {special_count} consonantes especiales de {consonant_count} totales")
             
         # Vocales - mantener el comportamiento correcto existente
+        print("\n🔊 Generando audios para vocales...")
         for vowel in self.data['zhuyin_system']['vowels']:
             zhuyin = vowel['zhuyin']
             pinyin = vowel['pinyin']
             
             filename = self.output_dir / "zhuyin_sounds" / f"{self.sanitize_filename(zhuyin)}_{pinyin}.mp3"
-            print(f"  Generando vocal {zhuyin} ({pinyin}) usando carácter zhuyin '{zhuyin}'")
+            print(f"  🎵 Generando vocal {zhuyin} ({pinyin}) usando carácter zhuyin '{zhuyin}'")
             self.generate_audio(zhuyin, str(filename))
             
     def generate_consonant_audios(self):
@@ -231,8 +254,8 @@ class ZhuyinAudioGenerator:
             filename = self.output_dir / "tones" / "examples" / f"tono_{tone_num}_{self.sanitize_filename(example['characters'])}_{example['pinyin']}.mp3"
             self.generate_audio(example['characters'], str(filename))
             
-    def regenerate_problematic_consonants_only(self):
-        """Regenera solo las consonantes problemáticas (útil para corregir el problema específico)"""
+    def regenerate_consonant_sounds_only(self):
+        """Regenera solo los sonidos de consonantes usando zhuyin"""
         if not self.load_data():
             return False
             
@@ -240,32 +263,44 @@ class ZhuyinAudioGenerator:
             print("✗ Error: No hay conexión a internet. gTTS requiere conexión a internet.")
             return False
             
-        print("🔧 Regenerando SOLO las consonantes problemáticas (ㄒ, ㄘ, ㄈ, ㄓ)...")
+        print("🔧 Regenerando TODOS los sonidos de consonantes usando zhuyin...")
+        print("🎯 Corrigiendo consonantes problemáticas: ㄒ, ㄑ, ㄐ, ㄖ")
+        print("🔍 Activando modo DEBUG para verificar procesamiento...")
         
         # Crear directorio si no existe
         sounds_dir = self.output_dir / "zhuyin_sounds"
         sounds_dir.mkdir(parents=True, exist_ok=True)
         
-        # Regenerar solo las consonantes problemáticas
+        consonant_count = 0
+        special_count = 0
+        
+        # Regenerar todas las consonantes usando lógica corregida
         for consonant in self.data['zhuyin_system']['consonants']:
             zhuyin = consonant['zhuyin']
             pinyin = consonant['pinyin']
+            consonant_count += 1
             
-            # Solo procesar consonantes problemáticas
-            if zhuyin in self.problematic_consonants:
-                filename = sounds_dir / f"{self.sanitize_filename(zhuyin)}_{pinyin}.mp3"
-                
-                # Eliminar archivo existente si existe
-                if filename.exists():
-                    filename.unlink()
-                    print(f"  🗑️  Eliminado archivo previo: {filename.name}")
-                
-                # Usar zhuyin + ㄚ para pronunciación correcta
-                consonant_sound = zhuyin + 'ㄚ'
-                print(f"  🔧 Regenerando consonante {zhuyin} ({pinyin}) como '{consonant_sound}'")
-                self.generate_audio(consonant_sound, str(filename))
+            filename = sounds_dir / f"{self.sanitize_filename(zhuyin)}_{pinyin}.mp3"
             
-        print("✅ Regeneración de consonantes problemáticas completada!")
+            # Eliminar archivo existente si existe
+            if filename.exists():
+                filename.unlink()
+                print(f"  🗑️  Eliminado archivo previo: {filename.name}")
+            
+            # Usar función dedicada para obtener la vocal correcta
+            vowel = self.get_appropriate_vowel_for_consonant(zhuyin)
+            consonant_sound = zhuyin + vowel
+            
+            if vowel != 'ㄚ':
+                special_count += 1
+                print(f"  🎵 [{consonant_count}] REGENERANDO ESPECIAL: {zhuyin} ({pinyin}) como '{consonant_sound}'")
+            else:
+                print(f"  🎵 [{consonant_count}] Regenerando normal: {zhuyin} ({pinyin}) como '{consonant_sound}'")
+                
+            self.generate_audio(consonant_sound, str(filename))
+        
+        print(f"\n📊 Resumen: {special_count} consonantes especiales de {consonant_count} totales")
+        print("✅ Regeneración de consonantes completada!")
         return True
             
     def regenerate_vowel_sounds_only(self):
@@ -295,10 +330,49 @@ class ZhuyinAudioGenerator:
                 filename.unlink()
                 print(f"  🗑️  Eliminado archivo previo: {filename.name}")
             
-            print(f"  Regenerando vocal {zhuyin} ({pinyin}) usando carácter zhuyin '{zhuyin}'")
+            print(f"  🎵 Regenerando vocal {zhuyin} ({pinyin}) usando carácter zhuyin '{zhuyin}'")
             self.generate_audio(zhuyin, str(filename))
             
         print("✅ Regeneración de vocales completada!")
+        return True
+    
+    def test_consonant_vowel_mapping(self):
+        """Función de prueba para verificar qué vocales se asignan a cada consonante"""
+        if not self.load_data():
+            return False
+            
+        print("🔍 MODO DEBUG: Verificando asignación de vocales para consonantes")
+        print("=" * 60)
+        
+        special_count = 0
+        total_count = 0
+        
+        for consonant in self.data['zhuyin_system']['consonants']:
+            zhuyin = consonant['zhuyin']
+            pinyin = consonant['pinyin']
+            total_count += 1
+            
+            vowel = self.get_appropriate_vowel_for_consonant(zhuyin)
+            sound = zhuyin + vowel
+            
+            if vowel != 'ㄚ':
+                special_count += 1
+                status = "🔧 ESPECIAL"
+            else:
+                status = "✓ Normal"
+            
+            print(f"{status} | {zhuyin:2} ({pinyin:3}) + {vowel} = {sound}")
+        
+        print("=" * 60)
+        print(f"📊 Total: {total_count} consonantes")
+        print(f"🔧 Especiales: {special_count} (ㄒ, ㄑ, ㄐ, ㄖ)")
+        print(f"✓ Normales: {total_count - special_count}")
+        
+        if special_count != 4:
+            print(f"⚠️  ADVERTENCIA: Se esperaban 4 consonantes especiales, se encontraron {special_count}")
+        else:
+            print("✅ Configuración correcta!")
+            
         return True
             
     def generate_all_audios(self):
@@ -310,9 +384,10 @@ class ZhuyinAudioGenerator:
             print("✗ Error: No hay conexión a internet. gTTS requiere conexión a internet.")
             return False
             
-        print("🎵 Iniciando generación de audios para Zhuyin/Bopomofo (VERSIÓN CORREGIDA)")
+        print("🎵 Iniciando generación de audios para Zhuyin/Bopomofo (VERSIÓN DEFINITIVA)")
         print(f"📁 Los audios se guardarán en: {self.output_dir.absolute()}")
-        print("🔧 Corrigiendo pronunciación de ㄒ, ㄘ, ㄈ y ㄓ...")
+        print("🎯 Usando SIEMPRE caracteres zhuyin con vocales fonéticamente correctas")
+        print("🔧 Corrigiendo ㄒ, ㄑ, ㄐ (con ㄧ) y ㄖ (con ㄨ)")
         
         start_time = time.time()
         
@@ -369,13 +444,14 @@ def main():
     """Función principal"""
     import argparse
     
-    parser = argparse.ArgumentParser(description="Generador de audios para Zhuyin/Bopomofo - VERSIÓN CORREGIDA")
+    parser = argparse.ArgumentParser(description="Generador de audios para Zhuyin/Bopomofo - VERSIÓN DEFINITIVA")
     parser.add_argument("--json", default="zhuyin_data.json", help="Archivo JSON con datos de zhuyin")
     parser.add_argument("--output", default="zhuyin_audios", help="Directorio de salida para audios")
     parser.add_argument("--clean", action="store_true", help="Limpiar archivos de audio existentes")
     parser.add_argument("--delay", type=float, default=1.0, help="Delay entre requests (segundos)")
     parser.add_argument("--fix-vowels", action="store_true", help="Regenerar solo los sonidos de vocales")
-    parser.add_argument("--fix-consonants", action="store_true", help="Regenerar solo las consonantes problemáticas (ㄒ, ㄘ, ㄈ, ㄓ)")
+    parser.add_argument("--fix-consonants", action="store_true", help="Regenerar solo los sonidos de consonantes (corrige ㄒ, ㄑ, ㄐ, ㄖ)")
+    parser.add_argument("--test-mapping", action="store_true", help="Probar asignación de vocales sin generar audios (modo debug)")
     
     args = parser.parse_args()
     
@@ -384,6 +460,16 @@ def main():
     
     if args.clean:
         generator.clean_audio_files()
+        return
+        
+    if args.test_mapping:
+        success = generator.test_consonant_vowel_mapping()
+        if success:
+            print("\n💡 Si ves que las consonantes ㄒ, ㄑ, ㄐ, ㄖ están marcadas como ESPECIALES,")
+            print("   entonces el código está funcionando correctamente.")
+            print("\n🚀 Ejecuta: python ultima_version.py --fix-consonants")
+        else:
+            print("\n✗ Error al verificar el mapeo.")
         return
         
     if args.fix_vowels:
@@ -395,16 +481,16 @@ def main():
         return
         
     if args.fix_consonants:
-        success = generator.regenerate_problematic_consonants_only()
+        success = generator.regenerate_consonant_sounds_only()
         if success:
-            print("\n🎉 ¡Consonantes problemáticas corregidas exitosamente!")
-            print("🔊 Ahora deberías escuchar:")
-            print("  • ㄈ como 'ㄈㄚ' (fa) en lugar de 'eff-ay'")
-            print("  • ㄒ como 'ㄒㄚ' (xia) correctamente")
-            print("  • ㄘ como 'ㄘㄚ' (ca) correctamente") 
-            print("  • ㄓ como 'ㄓㄚ' (zha) correctamente")
+            print("\n🎉 ¡Consonantes regeneradas exitosamente!")
+            print("🎯 Ahora TODAS las consonantes usan caracteres zhuyin apropiados:")
+            print("  • ㄒ, ㄑ, ㄐ + ㄧ (xi, qi, ji) - combinaciones válidas")
+            print("  • ㄖ + ㄨ (ru) - más natural que ra")
+            print("  • Resto + ㄚ - funcionan perfectamente")
+            print("📖 Esto resuelve el problema de audios silenciosos")
         else:
-            print("\n✗ Error al corregir las consonantes.")
+            print("\n✗ Error al regenerar las consonantes.")
         return
         
     success = generator.generate_all_audios()
@@ -420,8 +506,14 @@ def main():
         print("  • individual_words/: Todas las palabras individuales")
         print("  • zhuyin_sounds/: Sonidos individuales de zhuyin")
         print("\n💡 Comandos útiles:")
-        print("    python zhuyin_audio_generator.py --fix-vowels")
-        print("    python zhuyin_audio_generator_fixed.py --fix-consonants")
+        print("    python ultima_version.py --test-mapping     # Verificar mapeo (debug)")
+        print("    python ultima_version.py --fix-consonants   # Corregir consonantes")
+        print("    python ultima_version.py --fix-vowels       # Regenerar vocales")
+        print("\n🎯 MEJORA: Corrige consonantes problemáticas con vocales apropiadas")
+        print("  • ㄒ, ㄑ, ㄐ + ㄧ (xi, qi, ji - combinaciones válidas)")
+        print("  • ㄖ + ㄨ (ru - más natural que ra)")
+        print("  • Resto + ㄚ (funcionan perfectamente)")
+        print("\n🔍 Para verificar: python ultima_version.py --test-mapping")
     else:
         print("\n✗ El proceso no se completó correctamente.")
 
