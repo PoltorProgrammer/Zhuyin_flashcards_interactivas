@@ -551,21 +551,21 @@
         "zhuyin": "ㄝ",
         "pinyin": "ê",
         "example_word": {
-          "characters": "這",
-          "pinyin": "zhè",
-          "meaning": "este",
-          "zhuyin_typing": "ㄓㄜˋ"
+          "characters": "也",
+          "pinyin": "yě",
+          "meaning": "también",
+          "zhuyin_typing": "ㄧㄝˇ"
         },
-        "note": "El carácter ㄝ (ê) representa una vocal media-abierta. Su forma se asemeja a la de un 'lado' o 'cuchillo', lo que puede aludir a la pronunciación lateral del sonido. Aunque el sonido de 'ê' es similar al de la 'e' en español, en el sistema Zhuyin no se usa para sílabas que comienzan con ciertas consonantes. Para palabras como '這' (zhè), se usa la vocal 'ㄜ' (e).",
+        "note": "El carácter ㄝ (ê) no suele aparecer de manera independiente, sino combinado con ㄧ (i) como ㄧㄝ (ie). Un ejemplo común es '也' (yě). El sonido se asemeja a la 'e' en español, aunque en chino está restringido a ciertos contextos.",
         "mnemotecnia": "Parece la letra **e** con un pequeño gancho. Suena como la 'e' de **e**strella.",
         "example_sentence": {
-          "characters": "這是我的房間。",
-          "spanish_translation": "Esta es mi habitación.",
+          "characters": "我也是學生。",
+          "spanish_translation": "Yo también soy estudiante.",
           "words": [
-            {"characters": "這", "pinyin": "zhè", "meaning": "este", "zhuyin_typing": "ㄓㄜˋ"},
+            {"characters": "我", "pinyin": "wǒ", "meaning": "yo", "zhuyin_typing": "ㄨㄛˇ"},
+            {"characters": "也", "pinyin": "yě", "meaning": "también", "zhuyin_typing": "ㄧㄝˇ"},
             {"characters": "是", "pinyin": "shì", "meaning": "ser/estar", "zhuyin_typing": "ㄕˋ"},
-            {"characters": "我的", "pinyin": "wǒde", "meaning": "mi", "zhuyin_typing": "ㄨㄛˇㄉㄜ˙"},
-            {"characters": "房間", "pinyin": "fángjiān", "meaning": "habitación", "zhuyin_typing": "ㄈㄤˊㄐㄧㄢ"}
+            {"characters": "學生", "pinyin": "xuéshēng", "meaning": "estudiante", "zhuyin_typing": "ㄒㄩㄝˊ ㄕㄥ"}
           ]
         }
       },
