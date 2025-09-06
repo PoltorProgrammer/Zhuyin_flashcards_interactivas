@@ -203,7 +203,10 @@ class ZhuyinFlashcards {
                     tone_mark: item.mark,
                     description: item.description,
                     // No example_sentence for tones - will be handled differently
-                    example_sentence: null
+                    example_sentence: null,
+                    // No notes/mnemotecnia for tones
+                    note: null,
+                    mnemotecnia: null
                 });
             });
         }
@@ -325,20 +328,23 @@ class ZhuyinFlashcards {
         const wordSection = document.getElementById('wordSection');
         const sentenceSection = document.getElementById('sentenceSection');
         const breakdownSection = document.getElementById('breakdownSection');
+        const notesSection = document.getElementById('notesSection');
         
         if (currentCard.type === 'tones') {
-            // For tone cards, show only word example
+            // For tone cards, show only word example, hide notes
             if (wordSection) wordSection.style.display = 'block';
             if (sentenceSection) sentenceSection.style.display = 'none';
             if (breakdownSection) breakdownSection.style.display = 'none';
+            if (notesSection) notesSection.style.display = 'none';
             
             // Update word example
             this.updateWordExample(currentCard);
         } else {
-            // For consonant and vowel cards, show all sections
+            // For consonant and vowel cards, show all sections including notes
             if (wordSection) wordSection.style.display = 'block';
             if (sentenceSection) sentenceSection.style.display = 'block';
             if (breakdownSection) breakdownSection.style.display = 'block';
+            if (notesSection) notesSection.style.display = 'block';
             
             // Update word example
             this.updateWordExample(currentCard);
@@ -349,6 +355,9 @@ class ZhuyinFlashcards {
                 this.updateSentenceTranslation(currentCard.example_sentence);
                 this.updateWordBreakdown(currentCard.example_sentence.words);
             }
+            
+            // Update notes and mnemotecnia
+            this.updateNotesAndMnemotecnia(currentCard);
         }
         
         // Re-setup audio buttons for the back
@@ -373,9 +382,16 @@ class ZhuyinFlashcards {
     }
 
     updateSentenceTranslation(sentence) {
-        if (sentence.words) {
-            const translation = sentence.words.map(word => word.meaning).join(' ');
-            document.getElementById('sentenceTranslation').textContent = translation;
+        // Use spanish_translation directly instead of concatenating meanings
+        const sentenceTranslationElement = document.getElementById('sentenceTranslation');
+        if (sentence.spanish_translation) {
+            sentenceTranslationElement.textContent = sentence.spanish_translation;
+        } else {
+            // Fallback to concatenating meanings if spanish_translation is not available
+            if (sentence.words) {
+                const translation = sentence.words.map(word => word.meaning).join(' ');
+                sentenceTranslationElement.textContent = translation;
+            }
         }
     }
 
@@ -387,16 +403,28 @@ class ZhuyinFlashcards {
             words.forEach((word, index) => {
                 const wordItem = document.createElement('div');
                 wordItem.className = 'word-item';
-                wordItem.innerHTML = `
+                
+                // Build the word information display
+                let wordInfoHtml = `
                     <div>
                         <span class="word-chars">${word.characters}</span>
                         <span class="word-pinyin">${word.pinyin}</span>
+                `;
+                
+                // Add zhuyin_typing if available
+                if (word.zhuyin_typing) {
+                    wordInfoHtml += `<span class="word-zhuyin">${word.zhuyin_typing}</span>`;
+                }
+                
+                wordInfoHtml += `
                     </div>
                     <div class="word-meaning">${word.meaning}</div>
                     <button class="word-audio" data-chars="${word.characters}" data-pinyin="${word.pinyin}">
                         <i class="fas fa-volume-up"></i>
                     </button>
                 `;
+                
+                wordItem.innerHTML = wordInfoHtml;
                 
                 // Add event listener with stopPropagation
                 const audioBtn = wordItem.querySelector('.word-audio');
@@ -408,6 +436,26 @@ class ZhuyinFlashcards {
                 container.appendChild(wordItem);
             });
         }
+    }
+
+    updateNotesAndMnemotecnia(card) {
+        const noteText = document.getElementById('noteText');
+        const mnemotecniaText = document.getElementById('mnemotecniaText');
+        
+        // Update note content
+        if (card.note && noteText) {
+            noteText.innerHTML = this.processMarkdown(card.note);
+        }
+        
+        // Update mnemotecnia content
+        if (card.mnemotecnia && mnemotecniaText) {
+            mnemotecniaText.innerHTML = this.processMarkdown(card.mnemotecnia);
+        }
+    }
+
+    processMarkdown(text) {
+        // Convert **bold** to <strong>bold</strong>
+        return text.replace(/\*\*(.*?)\*\*/g, '<strong>$1</strong>');
     }
 
     // Overview Mode Methods
@@ -519,6 +567,18 @@ class ZhuyinFlashcards {
             wordMeaning.className = 'mini-word-meaning';
             wordMeaning.textContent = card.example_word.meaning;
             
+            backFace.appendChild(wordChars);
+            backFace.appendChild(wordPinyin);
+            backFace.appendChild(wordMeaning);
+            
+            // Add zhuyin typing if available
+            if (card.example_word.zhuyin_typing) {
+                const wordZhuyin = document.createElement('div');
+                wordZhuyin.className = 'mini-zhuyin-typing';
+                wordZhuyin.textContent = card.example_word.zhuyin_typing;
+                backFace.appendChild(wordZhuyin);
+            }
+            
             const wordAudioBtn = document.createElement('button');
             wordAudioBtn.className = 'mini-audio-btn';
             wordAudioBtn.innerHTML = '<i class="fas fa-play"></i>';
@@ -527,9 +587,6 @@ class ZhuyinFlashcards {
                 this.playMiniCardWordAudio(card);
             });
             
-            backFace.appendChild(wordChars);
-            backFace.appendChild(wordPinyin);
-            backFace.appendChild(wordMeaning);
             backFace.appendChild(wordAudioBtn);
         }
         
