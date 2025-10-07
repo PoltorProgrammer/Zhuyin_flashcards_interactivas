@@ -436,15 +436,15 @@
      },
      {
        "zhuyin": "ㄘ",
-       "pinyin": "c",
+       "pinyin": "ts",
        "example_word": {
          "characters": "菜",
-         "pinyin": "cài",
+         "pinyin": "tsài",
          "meaning": "comida/verdura",
          "zhuyin_typing": "ㄘㄞˋ"
        },
-       "note": "El carácter ㄘ (c) es una consonante alveolar africada aspirada. Se asemeja a una 'cabeza' o 'un corte', lo que refleja la brusquedad del sonido.",
-       "mnemotecnia": "Parece una persona agachándose y **c**ayéndose. Suena como 'ts' de 'tsunami', pero con más fuerza.",
+       "note": "El carácter ㄘ (ts) es una consonante alveolar africada aspirada. Se asemeja a una letra 't' combinada con una letra 's', lo que refleja su sonido.",
+       "mnemotecnia": "Parece una persona agachándose. Suena como 'ts' de 'tsunami', pero con más fuerza.",
        "example_sentence": {
          "characters": "這道菜很好吃。",
          "spanish_translation": "Este plato está muy delicioso.",
@@ -896,3 +896,4 @@
    ]
  }
 }
+
