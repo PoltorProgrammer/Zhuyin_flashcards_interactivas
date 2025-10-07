@@ -280,14 +280,14 @@
      },
      {
        "zhuyin": "ㄑ",
-       "pinyin": "q",
+       "pinyin": "ch",
        "example_word": {
          "characters": "錢",
-         "pinyin": "qián",
+         "pinyin": "chián",
          "meaning": "dinero",
          "zhuyin_typing": "ㄑㄧㄢˊ"
        },
-       "note": "El carácter ㄑ (q) es una **africada palatal aspirada** ($\text{[t͡ɕʰ]}$). Su articulación es **frontal y suave**: la punta de la lengua toca los dientes inferiores y el centro se eleva hacia el paladar duro. El sonido es **agudo, claro y limpio**.",
+       "note": "El carácter ㄑ (ch) es una **africada palatal aspirada** ($\text{[t͡ɕʰ]}$). Su articulación es **frontal y suave**: la punta de la lengua toca los dientes inferiores y el centro se eleva hacia el paladar duro. El sonido es **agudo, claro y limpio**.",
        "mnemotecnia": "Suena como una **'ch' suave y frontal** (como en 'chico'), pero con más aire. Piensa en una **'chí'** con la lengua pegada abajo.",
        "example_sentence": {
          "characters": "他有很多錢。",
@@ -896,4 +896,5 @@
    ]
  }
 }
+
 
