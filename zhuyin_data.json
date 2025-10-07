@@ -280,15 +280,15 @@
       },
       {
         "zhuyin": "ㄑ",
-        "pinyin": "q",
+        "pinyin": "ch",
         "example_word": {
           "characters": "錢",
-          "pinyin": "qián",
+          "pinyin": "chián",
           "meaning": "dinero",
           "zhuyin_typing": "ㄑㄧㄢˊ"
         },
         "note": "El carácter ㄑ (q) es una consonante palatal aspirada. Su forma, que recuerda a un 'caracol' o 'círculo con un gancho', se relaciona con el sonido 'silbante' que se produce al pronunciarla.",
-        "mnemotecnia": "Parece una **q** que se cae. Suena como la 'ch' de **ch**ico, pero más suave.",
+        "mnemotecnia": "Suena como la 'ch' de **ch**ico, pero más suave.",
         "example_sentence": {
           "characters": "他有很多錢。",
           "spanish_translation": "Él tiene mucho dinero.",
@@ -296,7 +296,7 @@
             {"characters": "他", "pinyin": "tā", "meaning": "él", "zhuyin_typing": "ㄊㄚ"},
             {"characters": "有", "pinyin": "yǒu", "meaning": "tener", "zhuyin_typing": "ㄧㄡˇ"},
             {"characters": "很多", "pinyin": "hěnduō", "meaning": "mucho", "zhuyin_typing": "ㄏㄣˇㄉㄨㄛ"},
-            {"characters": "錢", "pinyin": "qián", "meaning": "dinero", "zhuyin_typing": "ㄑㄧㄢˊ"}
+            {"characters": "錢", "pinyin": "chián", "meaning": "dinero", "zhuyin_typing": "ㄑㄧㄢˊ"}
           ]
         }
       },
